@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="HospitalServerManager.View.MainFrameView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HospitalServerManager.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <CommandBar FlowDirection="LeftToRight" VerticalAlignment="Top" Style="{StaticResource CommandBarRevealStyle}" 
+                    Name="navigationBar" Grid.Row="0">
+            <AppBarButton Icon="Street" Label="Sale" Tag="6" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Cut" Label="Operacje" Tag="5" Click="AppBarButton_Click" />
+            <AppBarButton Icon="Paste" Label="Diagnozy" Tag="4" Click="AppBarButton_Click" />
+            <AppBarButton Icon="WebCam" Label="Pracownicy" Tag="DoctorsPage" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="People" Label="Pacjenci" Tag="PatientsPage" Click="AppBarButton_Click" />
+            <AppBarButton Icon="AddFriend" Label="Przyjęcia" Tag="AdmissionsPage" Click="AppBarButton_Click"/>
+        </CommandBar>
+        <Frame Name="mainFrame" Grid.Row="1" Margin="5"/>
+    </Grid>
+</Page>

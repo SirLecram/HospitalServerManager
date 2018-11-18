@@ -1,0 +1,1 @@
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\HospitalServerManager\HospitalServerManager\HospitalServerManager.csproj;x86
