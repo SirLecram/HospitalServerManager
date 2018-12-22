@@ -24,9 +24,12 @@ namespace HospitalServerManager.ViewModel
         }
         public async void Read()
         {
-            await DbReader.ReadDataFromDatabase(@"Data Source=MARCEL\SQLEXPRESS;Initial Catalog = DB_s439397; Integrated Security = true;",
+            await DbReader.ReadDataFromDatabase(@"Data Source=MARCELPC;Initial Catalog = DB_s439397; Integrated Security = true;",
                  "SELECT * FROM Pacjenci", typeof(Model.Basic.Patient));
-            _Roster.AddRange(DbReader.LastReadedModels);
+            // TO TYLKO DLA TESTOW, DO USUNIECIA I NIE KOPIOWAC MECHANIKI !! 
+            List<ISqlTableModelable> lista = new List<ISqlTableModelable>();
+            DbReader.LastReadedModels.ToList().ForEach(model => lista.Add(new PatientViewModel(model as HospitalServerManager.Model.Basic.Patient)));
+            _Roster.AddRange(lista);
             ModelsCollection.AddRange(ModelsList);
         }
     }

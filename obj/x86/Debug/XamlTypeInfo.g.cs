@@ -189,23 +189,27 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
-            _typeNameTable[0] = "HospitalServerManager.View.MainFrameView";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "HospitalServerManager.ViewModel.RosterViewModel";
-            _typeNameTable[4] = "Object";
-            _typeNameTable[5] = "HospitalServerManager.View.UserControls.ColumnListView";
+            _typeNameTable = new string[9];
+            _typeNameTable[0] = "HospitalServerManager.ViewModel.RosterViewModel";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "HospitalServerManager.View.DoctorsPage";
+            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[5] = "HospitalServerManager.View.MainFrameView";
             _typeNameTable[6] = "HospitalServerManager.View.PatientsPage";
+            _typeNameTable[7] = "HospitalServerManager.View.RoomsPage";
+            _typeNameTable[8] = "HospitalServerManager.View.UserControls.ColumnListView";
 
-            _typeTable = new global::System.Type[7];
-            _typeTable[0] = typeof(global::HospitalServerManager.View.MainFrameView);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::HospitalServerManager.ViewModel.RosterViewModel);
-            _typeTable[4] = typeof(global::System.Object);
-            _typeTable[5] = typeof(global::HospitalServerManager.View.UserControls.ColumnListView);
+            _typeTable = new global::System.Type[9];
+            _typeTable[0] = typeof(global::HospitalServerManager.ViewModel.RosterViewModel);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::HospitalServerManager.View.DoctorsPage);
+            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[5] = typeof(global::HospitalServerManager.View.MainFrameView);
             _typeTable[6] = typeof(global::HospitalServerManager.View.PatientsPage);
+            _typeTable[7] = typeof(global::HospitalServerManager.View.RoomsPage);
+            _typeTable[8] = typeof(global::HospitalServerManager.View.UserControls.ColumnListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -240,10 +244,12 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainFrameView() { return new global::HospitalServerManager.View.MainFrameView(); }
-        private object Activate_3_RosterViewModel() { return new global::HospitalServerManager.ViewModel.RosterViewModel(); }
-        private object Activate_5_ColumnListView() { return new global::HospitalServerManager.View.UserControls.ColumnListView(); }
+        private object Activate_0_RosterViewModel() { return new global::HospitalServerManager.ViewModel.RosterViewModel(); }
+        private object Activate_2_DoctorsPage() { return new global::HospitalServerManager.View.DoctorsPage(); }
+        private object Activate_5_MainFrameView() { return new global::HospitalServerManager.View.MainFrameView(); }
         private object Activate_6_PatientsPage() { return new global::HospitalServerManager.View.PatientsPage(); }
+        private object Activate_7_RoomsPage() { return new global::HospitalServerManager.View.RoomsPage(); }
+        private object Activate_8_ColumnListView() { return new global::HospitalServerManager.View.UserControls.ColumnListView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -255,35 +261,35 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  HospitalServerManager.View.MainFrameView
-                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainFrameView;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 1:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  HospitalServerManager.ViewModel.RosterViewModel
+            case 0:   //  HospitalServerManager.ViewModel.RosterViewModel
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_3_RosterViewModel;
+                userType.Activator = Activate_0_RosterViewModel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Object
+            case 1:   //  Object
                 xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  HospitalServerManager.View.UserControls.ColumnListView
-                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_5_ColumnListView;
+            case 2:   //  HospitalServerManager.View.DoctorsPage
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_2_DoctorsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 3:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  HospitalServerManager.View.MainFrameView
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MainFrameView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -291,6 +297,20 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
             case 6:   //  HospitalServerManager.View.PatientsPage
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_6_PatientsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  HospitalServerManager.View.RoomsPage
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_RoomsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  HospitalServerManager.View.UserControls.ColumnListView
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_8_ColumnListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -1,0 +1,16 @@
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\App.g.i.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\App.g.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\MainFrameView.g.i.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\MainFrameView.g.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\PatientsPage.g.i.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\PatientsPage.g.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\UserControls\ColumnListView.g.i.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\UserControls\ColumnListView.g.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\App.xaml
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\MainFrameView.xaml
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\PatientsPage.xaml
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\UserControls\ColumnListView.xaml
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\App.xbf
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\MainFrameView.xbf
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\PatientsPage.xbf
+C:\Users\Marcel\Documents\GitHub\HospitalServerManager\obj\x64\Debug\View\UserControls\ColumnListView.xbf

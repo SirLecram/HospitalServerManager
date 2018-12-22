@@ -15,17 +15,9 @@ namespace HospitalServerManager.Model
         //private Controllers.DatabaseReader DatabaseReader = new Controllers.DatabaseReader();
         public ModelRoster()
         {
-      /*      Read();
-            _modelsList.Clear();
-            _modelsList.AddRange(DatabaseReader.LastReadedModels);*/
+    
         }
 
-        public async void Read()
-        {
-          /*  await DatabaseReader.ReadDataFromDatabase(@"Data Source=MARCEL\SQLEXPRESS;Initial Catalog = DB_s439397; Integrated Security = true;",
-               "SELECT * FROM Pacjenci", typeof(Patient));*/
-            
-        }
         public void AddRange(IEnumerable<ISqlTableModelable> modelsList)
         {
             _modelsList.Clear();

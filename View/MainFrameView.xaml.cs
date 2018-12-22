@@ -22,13 +22,14 @@ namespace HospitalServerManager.View
     /// </summary>
     public sealed partial class MainFrameView : Page
     {
+        
         public MainFrameView()
         {
             this.InitializeComponent();
         }
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(typeof(PatientsPage));
+            mainFrame.Navigate(typeof(PatientsPage), new HospitalServerManager.ViewModel.Controllers.DatabaseReader());
             //Frame.Navigate(typeof(PatientsPage)); 
         }
     }

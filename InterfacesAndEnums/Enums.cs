@@ -73,4 +73,46 @@ namespace HospitalServerManager.InterfacesAndEnums
         [Description("M")]
         M,
     }
+	public enum SurgeryField
+	{
+		[Description("Ogólna")]
+		General,
+		[Description("Klatki piersiowej")]
+		Throatic,
+		[Description("Sercowo - naczyniowa")]
+		Cardioviscular,
+		[Description("Układu nerwowego")]
+		NervousSystem,
+		[Description("Urologia")]
+		Urology,
+		[Description("Szczękowo - twarzowa")]
+		Maxillofacial,
+		[Description("Urazowa")]
+		Accidential,
+		[Description("Inne")]
+		Other,
+	}
+	public enum SurgeryKind
+	{
+		[Description("Szycie")]
+		Stitching,
+		[Description("Resekcja")]
+		Resection,
+		[Description("Amputacja")]
+		Amputation,
+		[Description("Drenaż")]
+		Drainge,
+		[Description("Nastawianie złamań")]
+		Bonesetting,
+		[Description("Ingerencja wewnątrz klatki piersiowej")]
+		Throastic,
+		[Description("Operacja serca")]
+		Heart,
+		[Description("Operacja układu nerwowego")]
+		Nervous,
+		[Description("Przeszczep")]
+		Graft,
+		[Description("Inne")]
+		Other,
+	}
 }

@@ -1,0 +1,174 @@
+﻿<Page
+    x:Class="HospitalServerManager.View.DoctorsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HospitalServerManager.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewmodel="using:HospitalServerManager.ViewModel"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <viewmodel:RosterViewModel x:Name="RosterViewModel"/>
+    </Page.Resources>
+    <!--   <Grid DataContext="{StaticResource ResourceKey=RosterViewModel}">
+        <userControls:ColumnListView DataContext="{StaticResource RosterViewModel}" Name="lv"/>
+    </Grid> -->
+
+    <Grid Background="DimGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.75*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Pacjenci" HorizontalAlignment="Left" Margin="15, 5, 0, 0" FontSize="20"
+                   VerticalAlignment="Top" Name="pageTitle" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Nowy rekord" Margin="30, 0, 30, 0"  Grid.Row="1" Click="NewRecordButton_Click" Width="150"/>
+            <Button Content="Usuń zaznaczone" Margin="30, 0, 30, 0"  Grid.Row="1" Grid.Column="1" Click="DeleteButton_Click" Width="150"/>
+            <Button Content="Edytuj rekord" Margin="30, 0, 30, 0"  Grid.Row="1" Click="EditButton_Click" Width="150"/>
+        </StackPanel>
+
+        <!-- </StackPanel> -->
+
+        <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="LightBlue" BorderThickness="2" CornerRadius="10" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+            <TextBlock Text="Szukaj" Margin="5, 0, 0, 0" />
+            <TextBlock Text="Szukaj wyrażenia:" Grid.Row="1" HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Center" Margin="10"/>
+            <TextBlock Text="Szukaj w:" Grid.Row="2" HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Center" Margin="10"/>
+            <TextBox Name="searchBox" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Center" Margin="10"/>
+            <ComboBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"
+                      Name="lookInComboBox" />
+            <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="10">
+                <Button Content="Przeszukaj bazę" HorizontalAlignment="Stretch" Margin="10" Click="SearchButton_Click"/>
+                <Button Content="Resetuj" HorizontalAlignment="Stretch" Margin="10" Click="ResetButton_Click"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="LightBlue" BorderThickness="2" CornerRadius="10" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+
+            <TextBlock Text="Sortowanie i filtry" Margin="5, 0, 0, 0" />
+            <TextBlock Text="Sortuj według:" Grid.Row="1" HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Center" Margin="10"/>
+            <ComboBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                      Margin="10" Name="sortComboBox" SelectionChanged="SortComboBox_SelectionChanged" />
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1" Click="RadionBtn_Click"/>
+                <RadioButton Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2" Click="RadionBtn_Click"/>
+            </StackPanel>
+            <Button Content="Zaawansowane filtry" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                    Margin="15, 0, 15, 0"/>
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                  BorderBrush="AliceBlue" BorderThickness="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                      HorizontalContentAlignment="Stretch">
+                <ListView.HeaderTemplate >
+
+                    <DataTemplate >
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="PESEL" Margin="8,0"  Foreground="DarkRed" Grid.Column="0"/>
+                            <TextBlock Text="Imię"  Foreground="DarkRed" Grid.Column="1"/>
+                            <TextBlock Text="Nazwisko"  Foreground="DarkRed" Grid.Column="2"/>
+                            <TextBlock Text="Data urodzenia" Foreground="DarkRed" Grid.Column="3"/>
+                            <TextBlock Text="Stan" Foreground="DarkRed" Grid.Column="4"/>
+                            <TextBlock Text="Płec"  Foreground="DarkRed" Grid.Column="5"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+            </ListView>
+            <ListView Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                  BorderBrush="AliceBlue" BorderThickness="2" Name="databaseView" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.IsVerticalRailEnabled="True"
+                  ScrollViewer.VerticalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.IsHorizontalRailEnabled="True">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate x:DataType="viewmodel:PatientViewModel">
+
+                        <Grid Name="valueStoreGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Name="ItemId"
+                                    Text="{x:Bind PrimaryKey}"
+                                    Grid.Column="0" />
+                            <TextBlock Name="ItemName"
+                                    Text="{x:Bind Surname}"
+                                     Grid.Column="1"/>
+                            <TextBlock Text="{x:Bind Name}"
+                                    Grid.Column="2"/>
+                            <TextBlock Text="{x:Bind BirthDate}"
+                                   Grid.Column="3"/>
+                            <TextBlock Text="{x:Bind PatientState}"
+                                    Grid.Column="4"/>
+                            <TextBlock Text="{x:Bind PatientSex}"
+                                    Grid.Column="5"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>

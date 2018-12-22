@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.Model.Basic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +8,34 @@ using System.Threading.Tasks;
 
 namespace HospitalServerManager.ViewModel
 {
-    class PatientViewModel
+    class PatientViewModel : ISqlTableModelable
     {
-        public string PrimaryKey { get; private set; }
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public DateTime BirthDate { get; private set; }
-        public string PatientState { get; private set; }
-        public string PatientSex { get; private set; }
+        private Patient model;
+        public string PrimaryKey { get => model.PrimaryKey; }
+        public string Name { get => model.Name; }
+        public string Surname { get => model.Surname; }
+        public DateTime BirthDate { get => model.BirthDate; }
+        public string PatientState { get => model.PatientState.GetEnumDescription(); }
+        public string PatientSex { get => model.PatientSex.GetEnumDescription(); }
 
-        public PatientViewModel(Model.Basic.Patient patient)
+        public PatientViewModel(Patient patient)
         {
+            model = patient;
+        }
 
+        public List<string> GetColumnNames()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetPrimaryKey()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetPrimaryKeyName()
+        {
+            throw new NotImplementedException();
         }
     }
 }

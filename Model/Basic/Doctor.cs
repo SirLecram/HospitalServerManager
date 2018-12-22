@@ -9,18 +9,12 @@ namespace HospitalServerManager.Model.Basic
 {
     class Doctor : SqlTable
     {
-        //public int DoctorId { get; protected set; }
         public string Name { get; protected set; }
+        public AcademicDegrees _AcademicDegree { get; set; }
+        public MedicalSpecializations _MedicalSpecialization { get; set; }
         public string Surname { get; protected set; }
-        private AcademicDegrees _AcademicDegree { get; set; }
-        public string AcademicDegree { get => _AcademicDegree.GetEnumDescription(); }
-        private MedicalSpecializations _MedicalSpecialization { get; set; }
-        public string MedicalSpecialization { get => _MedicalSpecialization.GetEnumDescription(); }
         public DateTime DateOfEmployment { get; protected set; }
-        private JobPositions _JobPosition { get; set; }
-        public string JobPosition { get => _JobPosition.GetEnumDescription(); }
-
-
+        public JobPositions _JobPosition { get; set; }
 
         protected Doctor() : base()
         {

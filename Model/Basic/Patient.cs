@@ -9,26 +9,11 @@ namespace HospitalServerManager.Model.Basic
 {
     internal class Patient : SqlTable
     {
-        /*public override string PrimaryKeyNameToSql { get; protected set; }
-        public override string GetPrimaryKey => PeselNumber;*/
         public string Surname { get; protected set; }
         public string Name { get; protected set; }
         public DateTime BirthDate { get; protected set; }
-        public PatientState _PatientState { get; protected set; }
-        /*public string PatientState
-        {
-            get
-            {
-                if (_PatientState.GetEnumDescription() == "NULL")
-                    return string.Empty;
-                else
-                    return _PatientState.GetEnumDescription();
-            }
-        }*/
-        public Sex _PatientSex { get; protected set; }
-       // public string PatientSex { get => _PatientSex.GetEnumDescription(); }
-
-
+        public PatientState PatientState { get; protected set; }
+        public Sex PatientSex { get; protected set; }
 
         protected Patient() : base()
         {
@@ -42,8 +27,8 @@ namespace HospitalServerManager.Model.Basic
             Surname = surname;
             Name = name;
             BirthDate = birthDate;
-            _PatientState = patientState;
-            _PatientSex = patientSex;
+            PatientState = patientState;
+            PatientSex = patientSex;
         }
         /// <summary>
         /// List have to be in right order (pesel, surname, name, birth date, patient state, patient sex).
@@ -59,8 +44,8 @@ namespace HospitalServerManager.Model.Basic
             Surname = listOfValues[1];
             Name = listOfValues[2];
             BirthDate = DateTime.Parse(listOfValues[3]);
-            _PatientState = listOfValues[4].GetEnumFromDescription<PatientState>();
-            _PatientSex = (Sex)Enum.Parse(typeof(Sex), listOfValues[5]);
+            PatientState = listOfValues[4].GetEnumFromDescription<PatientState>();
+            PatientSex = (Sex)Enum.Parse(typeof(Sex), listOfValues[5]);
         }
     }
 }
