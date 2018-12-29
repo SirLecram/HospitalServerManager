@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.Model.Controllers;
 
 namespace HospitalServerManager.Model.Basic
 {
     internal abstract class SqlTable : ISqlTableModelable
     {
-        // TODO: Dodac table do klas modelu
-        public string PrimaryKey { get; protected set; }
+		// TODO: Dodac table do klas modelu
+		public string PrimaryKey { get; protected set; }
         protected string PrimaryKeyName { get; set; }
         protected List<string> ColumnNames { get; set; }
         protected SqlTable()

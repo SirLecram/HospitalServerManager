@@ -148,6 +148,15 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="HospitalServerManager.View.MainFrameView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
+      <RootProperty Name="Title" />
+      <RootProperty Name="PrimaryButtonText" />
+      <RootProperty Name="SecondaryButtonText" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="PrimaryButtonClick" />
+      <RootEvent Name="SecondaryButtonClick" />
+    </RootType>
+    <RootType FullName="HospitalServerManager.View.NewRecordDialog" />
     <RootType FullName="HospitalServerManager.View.PatientsPage" />
     <RootType FullName="HospitalServerManager.View.RoomsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalServerManager.InterfacesAndEnums;
+using Newtonsoft.Json;
 
 namespace HospitalServerManager.Model.Basic
 {
@@ -18,23 +19,35 @@ namespace HospitalServerManager.Model.Basic
         protected Patient() : base()
         {
         }
-        public Patient(string primaryKey, string surname, string name, DateTime birthDate, PatientState patientState,
-            Sex patientSex) : base(primaryKey, "PESEL", new List<string>())
+		[JsonConstructor]
+        protected Patient(string pesel, string name, string surname, DateTime birthDate, string patientState,
+            string patientSex) : base(pesel, "PESEL", new List<string>())
         {
-            if (primaryKey.Length < 11 || primaryKey.Length > 11)
+            if (pesel.Length < 11 || pesel.Length > 11)
                 throw new FormatException("PESEL musi mieć 11 cyfr");
-            PrimaryKey = primaryKey;
+            //PrimaryKey = pesel;
             Surname = surname;
             Name = name;
             BirthDate = birthDate;
-            PatientState = patientState;
-            PatientSex = patientSex;
+            PatientState = patientState.GetEnumFromDescription<PatientState>();
+            PatientSex = patientSex.GetEnumFromDescription<Sex>();
         }
-        /// <summary>
-        /// List have to be in right order (pesel, surname, name, birth date, patient state, patient sex).
-        /// </summary>
-        /// <param name="listOfValues"></param>
-        public Patient(List<string> listOfValues) : base(listOfValues[0], "PESEL", new List<string>())
+		public Patient(string pesel, string name, string surname, DateTime birthDate, PatientState patientState,
+		   Sex patientSex) : base(pesel, "PESEL", new List<string>())
+		{
+			if (pesel.Length < 11 || pesel.Length > 11)
+				throw new FormatException("PESEL musi mieć 11 cyfr");
+			//PrimaryKey = pesel;
+			Surname = surname;
+			Name = name;
+			BirthDate = birthDate;
+			PatientState = patientState;
+			PatientSex = patientSex;
+		}/// <summary>
+		 /// List have to be in right order (pesel, surname, name, birth date, patient state, patient sex).
+		 /// </summary>
+		 /// <param name="listOfValues"></param>
+		public Patient(List<string> listOfValues) : base(listOfValues[0], "PESEL", new List<string>())
         {
             // TODO: Dodać zabezpieczenia dla pozostałych wartosci
             // TODO: VALIDATOR! Lista kolumn nazw;

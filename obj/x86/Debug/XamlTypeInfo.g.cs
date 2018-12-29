@@ -189,27 +189,83 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[9];
+            _typeNameTable = new string[37];
             _typeNameTable[0] = "HospitalServerManager.ViewModel.RosterViewModel";
             _typeNameTable[1] = "Object";
-            _typeNameTable[2] = "HospitalServerManager.View.DoctorsPage";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[5] = "HospitalServerManager.View.MainFrameView";
-            _typeNameTable[6] = "HospitalServerManager.View.PatientsPage";
-            _typeNameTable[7] = "HospitalServerManager.View.RoomsPage";
-            _typeNameTable[8] = "HospitalServerManager.View.UserControls.ColumnListView";
+            _typeNameTable[2] = "System.Collections.Generic.IEnumerable`1<String>";
+            _typeNameTable[3] = "System.Collections.Generic.IDictionary`2<Int32, String>";
+            _typeNameTable[4] = "String";
+            _typeNameTable[5] = "Int32";
+            _typeNameTable[6] = "System.Collections.Generic.Dictionary`2<String, System.Type>";
+            _typeNameTable[7] = "System.Type";
+            _typeNameTable[8] = "System.Reflection.MemberInfo";
+            _typeNameTable[9] = "System.Reflection.Assembly";
+            _typeNameTable[10] = "System.Reflection.TypeAttributes";
+            _typeNameTable[11] = "System.Enum";
+            _typeNameTable[12] = "System.ValueType";
+            _typeNameTable[13] = "Boolean";
+            _typeNameTable[14] = "System.Reflection.MethodBase";
+            _typeNameTable[15] = "System.Reflection.GenericParameterAttributes";
+            _typeNameTable[16] = "System.Type[]";
+            _typeNameTable[17] = "System.Array";
+            _typeNameTable[18] = "Guid";
+            _typeNameTable[19] = "System.Reflection.MemberTypes";
+            _typeNameTable[20] = "System.Reflection.Module";
+            _typeNameTable[21] = "System.Runtime.InteropServices.StructLayoutAttribute";
+            _typeNameTable[22] = "System.Attribute";
+            _typeNameTable[23] = "System.RuntimeTypeHandle";
+            _typeNameTable[24] = "System.Reflection.ConstructorInfo";
+            _typeNameTable[25] = "System.Collections.Generic.IEnumerable`1<System.Reflection.CustomAttributeData>";
+            _typeNameTable[26] = "HospitalServerManager.View.DoctorsPage";
+            _typeNameTable[27] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[28] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[29] = "HospitalServerManager.View.MainFrameView";
+            _typeNameTable[30] = "HospitalServerManager.View.NewRecordDialog";
+            _typeNameTable[31] = "Windows.UI.Xaml.Controls.ContentDialog";
+            _typeNameTable[32] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[33] = "System.Collections.Generic.List`1<String>";
+            _typeNameTable[34] = "HospitalServerManager.View.PatientsPage";
+            _typeNameTable[35] = "HospitalServerManager.View.RoomsPage";
+            _typeNameTable[36] = "HospitalServerManager.View.UserControls.ColumnListView";
 
-            _typeTable = new global::System.Type[9];
+            _typeTable = new global::System.Type[37];
             _typeTable[0] = typeof(global::HospitalServerManager.ViewModel.RosterViewModel);
             _typeTable[1] = typeof(global::System.Object);
-            _typeTable[2] = typeof(global::HospitalServerManager.View.DoctorsPage);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[5] = typeof(global::HospitalServerManager.View.MainFrameView);
-            _typeTable[6] = typeof(global::HospitalServerManager.View.PatientsPage);
-            _typeTable[7] = typeof(global::HospitalServerManager.View.RoomsPage);
-            _typeTable[8] = typeof(global::HospitalServerManager.View.UserControls.ColumnListView);
+            _typeTable[2] = typeof(global::System.Collections.Generic.IEnumerable<global::System.String>);
+            _typeTable[3] = typeof(global::System.Collections.Generic.IDictionary<global::System.Int32, global::System.String>);
+            _typeTable[4] = typeof(global::System.String);
+            _typeTable[5] = typeof(global::System.Int32);
+            _typeTable[6] = typeof(global::System.Collections.Generic.Dictionary<global::System.String, global::System.Type>);
+            _typeTable[7] = typeof(global::System.Type);
+            _typeTable[8] = typeof(global::System.Reflection.MemberInfo);
+            _typeTable[9] = typeof(global::System.Reflection.Assembly);
+            _typeTable[10] = typeof(global::System.Reflection.TypeAttributes);
+            _typeTable[11] = typeof(global::System.Enum);
+            _typeTable[12] = typeof(global::System.ValueType);
+            _typeTable[13] = typeof(global::System.Boolean);
+            _typeTable[14] = typeof(global::System.Reflection.MethodBase);
+            _typeTable[15] = typeof(global::System.Reflection.GenericParameterAttributes);
+            _typeTable[16] = typeof(global::System.Type[]);
+            _typeTable[17] = typeof(global::System.Array);
+            _typeTable[18] = typeof(global::System.Guid);
+            _typeTable[19] = typeof(global::System.Reflection.MemberTypes);
+            _typeTable[20] = typeof(global::System.Reflection.Module);
+            _typeTable[21] = typeof(global::System.Runtime.InteropServices.StructLayoutAttribute);
+            _typeTable[22] = typeof(global::System.Attribute);
+            _typeTable[23] = typeof(global::System.RuntimeTypeHandle);
+            _typeTable[24] = typeof(global::System.Reflection.ConstructorInfo);
+            _typeTable[25] = typeof(global::System.Collections.Generic.IEnumerable<global::System.Reflection.CustomAttributeData>);
+            _typeTable[26] = typeof(global::HospitalServerManager.View.DoctorsPage);
+            _typeTable[27] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[28] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[29] = typeof(global::HospitalServerManager.View.MainFrameView);
+            _typeTable[30] = typeof(global::HospitalServerManager.View.NewRecordDialog);
+            _typeTable[31] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
+            _typeTable[32] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[33] = typeof(global::System.Collections.Generic.List<global::System.String>);
+            _typeTable[34] = typeof(global::HospitalServerManager.View.PatientsPage);
+            _typeTable[35] = typeof(global::HospitalServerManager.View.RoomsPage);
+            _typeTable[36] = typeof(global::HospitalServerManager.View.UserControls.ColumnListView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -245,11 +301,33 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
         }
 
         private object Activate_0_RosterViewModel() { return new global::HospitalServerManager.ViewModel.RosterViewModel(); }
-        private object Activate_2_DoctorsPage() { return new global::HospitalServerManager.View.DoctorsPage(); }
-        private object Activate_5_MainFrameView() { return new global::HospitalServerManager.View.MainFrameView(); }
-        private object Activate_6_PatientsPage() { return new global::HospitalServerManager.View.PatientsPage(); }
-        private object Activate_7_RoomsPage() { return new global::HospitalServerManager.View.RoomsPage(); }
-        private object Activate_8_ColumnListView() { return new global::HospitalServerManager.View.UserControls.ColumnListView(); }
+        private object Activate_6_Dictionary() { return new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Type>(); }
+        private object Activate_26_DoctorsPage() { return new global::HospitalServerManager.View.DoctorsPage(); }
+        private object Activate_29_MainFrameView() { return new global::HospitalServerManager.View.MainFrameView(); }
+        private object Activate_33_List() { return new global::System.Collections.Generic.List<global::System.String>(); }
+        private object Activate_34_PatientsPage() { return new global::HospitalServerManager.View.PatientsPage(); }
+        private object Activate_35_RoomsPage() { return new global::HospitalServerManager.View.RoomsPage(); }
+        private object Activate_36_ColumnListView() { return new global::HospitalServerManager.View.UserControls.ColumnListView(); }
+        private void MapAdd_3_IDictionary(object instance, object key, object item)
+        {
+            var collection = (global::System.Collections.Generic.IDictionary<global::System.Int32, global::System.String>)instance;
+            var newKey = (global::System.Int32)key;
+            var newItem = (global::System.String)item;
+            collection.Add(newKey, newItem);
+        }
+        private void MapAdd_6_Dictionary(object instance, object key, object item)
+        {
+            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Type>)instance;
+            var newKey = (global::System.String)key;
+            var newItem = (global::System.Type)item;
+            collection.Add(newKey, newItem);
+        }
+        private void VectorAdd_33_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -264,6 +342,9 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
             case 0:   //  HospitalServerManager.ViewModel.RosterViewModel
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_RosterViewModel;
+                userType.AddMemberName("ColumnNames");
+                userType.AddMemberName("ColumnTypes");
+                userType.AddMemberName("EnumTypes");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -272,45 +353,312 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
                 xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  HospitalServerManager.View.DoctorsPage
-                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_DoctorsPage;
-                userType.SetIsLocalType();
+            case 2:   //  System.Collections.Generic.IEnumerable`1<String>
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 3:   //  System.Collections.Generic.IDictionary`2<Int32, String>
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.DictionaryAdd = MapAdd_3_IDictionary;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  String
                 xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+            case 5:   //  Int32
                 xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  HospitalServerManager.View.MainFrameView
+            case 6:   //  System.Collections.Generic.Dictionary`2<String, System.Type>
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_6_Dictionary;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 7:   //  System.Type
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Reflection.MemberInfo"));
+                userType.AddMemberName("Assembly");
+                userType.AddMemberName("AssemblyQualifiedName");
+                userType.AddMemberName("Attributes");
+                userType.AddMemberName("BaseType");
+                userType.AddMemberName("ContainsGenericParameters");
+                userType.AddMemberName("DeclaringMethod");
+                userType.AddMemberName("DeclaringType");
+                userType.AddMemberName("FullName");
+                userType.AddMemberName("GenericParameterAttributes");
+                userType.AddMemberName("GenericParameterPosition");
+                userType.AddMemberName("GenericTypeArguments");
+                userType.AddMemberName("GUID");
+                userType.AddMemberName("HasElementType");
+                userType.AddMemberName("IsAbstract");
+                userType.AddMemberName("IsAnsiClass");
+                userType.AddMemberName("IsArray");
+                userType.AddMemberName("IsAutoClass");
+                userType.AddMemberName("IsAutoLayout");
+                userType.AddMemberName("IsByRef");
+                userType.AddMemberName("IsClass");
+                userType.AddMemberName("IsCOMObject");
+                userType.AddMemberName("IsConstructedGenericType");
+                userType.AddMemberName("IsContextful");
+                userType.AddMemberName("IsEnum");
+                userType.AddMemberName("IsExplicitLayout");
+                userType.AddMemberName("IsGenericParameter");
+                userType.AddMemberName("IsGenericType");
+                userType.AddMemberName("IsGenericTypeDefinition");
+                userType.AddMemberName("IsImport");
+                userType.AddMemberName("IsInterface");
+                userType.AddMemberName("IsLayoutSequential");
+                userType.AddMemberName("IsMarshalByRef");
+                userType.AddMemberName("IsNested");
+                userType.AddMemberName("IsNestedAssembly");
+                userType.AddMemberName("IsNestedFamANDAssem");
+                userType.AddMemberName("IsNestedFamily");
+                userType.AddMemberName("IsNestedFamORAssem");
+                userType.AddMemberName("IsNestedPrivate");
+                userType.AddMemberName("IsNestedPublic");
+                userType.AddMemberName("IsNotPublic");
+                userType.AddMemberName("IsPointer");
+                userType.AddMemberName("IsPrimitive");
+                userType.AddMemberName("IsPublic");
+                userType.AddMemberName("IsSealed");
+                userType.AddMemberName("IsSecurityCritical");
+                userType.AddMemberName("IsSecuritySafeCritical");
+                userType.AddMemberName("IsSecurityTransparent");
+                userType.AddMemberName("IsSerializable");
+                userType.AddMemberName("IsSpecialName");
+                userType.AddMemberName("IsTypeDefinition");
+                userType.AddMemberName("IsSZArray");
+                userType.AddMemberName("IsVariableBoundArray");
+                userType.AddMemberName("IsUnicodeClass");
+                userType.AddMemberName("IsValueType");
+                userType.AddMemberName("IsVisible");
+                userType.AddMemberName("MemberType");
+                userType.AddMemberName("Module");
+                userType.AddMemberName("Namespace");
+                userType.AddMemberName("ReflectedType");
+                userType.AddMemberName("StructLayoutAttribute");
+                userType.AddMemberName("TypeHandle");
+                userType.AddMemberName("TypeInitializer");
+                userType.AddMemberName("UnderlyingSystemType");
+                xamlType = userType;
+                break;
+
+            case 8:   //  System.Reflection.MemberInfo
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("CustomAttributes");
+                userType.AddMemberName("MetadataToken");
+                userType.AddMemberName("Name");
+                xamlType = userType;
+                break;
+
+            case 9:   //  System.Reflection.Assembly
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 10:   //  System.Reflection.TypeAttributes
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("AnsiClass", global::System.Reflection.TypeAttributes.AnsiClass);
+                userType.AddEnumValue("AutoLayout", global::System.Reflection.TypeAttributes.AutoLayout);
+                userType.AddEnumValue("Class", global::System.Reflection.TypeAttributes.Class);
+                userType.AddEnumValue("NotPublic", global::System.Reflection.TypeAttributes.NotPublic);
+                userType.AddEnumValue("Public", global::System.Reflection.TypeAttributes.Public);
+                userType.AddEnumValue("NestedPublic", global::System.Reflection.TypeAttributes.NestedPublic);
+                userType.AddEnumValue("NestedPrivate", global::System.Reflection.TypeAttributes.NestedPrivate);
+                userType.AddEnumValue("NestedFamily", global::System.Reflection.TypeAttributes.NestedFamily);
+                userType.AddEnumValue("NestedAssembly", global::System.Reflection.TypeAttributes.NestedAssembly);
+                userType.AddEnumValue("NestedFamANDAssem", global::System.Reflection.TypeAttributes.NestedFamANDAssem);
+                userType.AddEnumValue("NestedFamORAssem", global::System.Reflection.TypeAttributes.NestedFamORAssem);
+                userType.AddEnumValue("VisibilityMask", global::System.Reflection.TypeAttributes.VisibilityMask);
+                userType.AddEnumValue("SequentialLayout", global::System.Reflection.TypeAttributes.SequentialLayout);
+                userType.AddEnumValue("ExplicitLayout", global::System.Reflection.TypeAttributes.ExplicitLayout);
+                userType.AddEnumValue("LayoutMask", global::System.Reflection.TypeAttributes.LayoutMask);
+                userType.AddEnumValue("ClassSemanticsMask", global::System.Reflection.TypeAttributes.ClassSemanticsMask);
+                userType.AddEnumValue("Interface", global::System.Reflection.TypeAttributes.Interface);
+                userType.AddEnumValue("Abstract", global::System.Reflection.TypeAttributes.Abstract);
+                userType.AddEnumValue("Sealed", global::System.Reflection.TypeAttributes.Sealed);
+                userType.AddEnumValue("SpecialName", global::System.Reflection.TypeAttributes.SpecialName);
+                userType.AddEnumValue("RTSpecialName", global::System.Reflection.TypeAttributes.RTSpecialName);
+                userType.AddEnumValue("Import", global::System.Reflection.TypeAttributes.Import);
+                userType.AddEnumValue("Serializable", global::System.Reflection.TypeAttributes.Serializable);
+                userType.AddEnumValue("WindowsRuntime", global::System.Reflection.TypeAttributes.WindowsRuntime);
+                userType.AddEnumValue("UnicodeClass", global::System.Reflection.TypeAttributes.UnicodeClass);
+                userType.AddEnumValue("AutoClass", global::System.Reflection.TypeAttributes.AutoClass);
+                userType.AddEnumValue("CustomFormatClass", global::System.Reflection.TypeAttributes.CustomFormatClass);
+                userType.AddEnumValue("StringFormatMask", global::System.Reflection.TypeAttributes.StringFormatMask);
+                userType.AddEnumValue("HasSecurity", global::System.Reflection.TypeAttributes.HasSecurity);
+                userType.AddEnumValue("ReservedMask", global::System.Reflection.TypeAttributes.ReservedMask);
+                userType.AddEnumValue("BeforeFieldInit", global::System.Reflection.TypeAttributes.BeforeFieldInit);
+                userType.AddEnumValue("CustomFormatMask", global::System.Reflection.TypeAttributes.CustomFormatMask);
+                xamlType = userType;
+                break;
+
+            case 11:   //  System.Enum
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 12:   //  System.ValueType
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 13:   //  Boolean
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  System.Reflection.MethodBase
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Reflection.MemberInfo"));
+                xamlType = userType;
+                break;
+
+            case 15:   //  System.Reflection.GenericParameterAttributes
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::System.Reflection.GenericParameterAttributes.None);
+                userType.AddEnumValue("Covariant", global::System.Reflection.GenericParameterAttributes.Covariant);
+                userType.AddEnumValue("Contravariant", global::System.Reflection.GenericParameterAttributes.Contravariant);
+                userType.AddEnumValue("VarianceMask", global::System.Reflection.GenericParameterAttributes.VarianceMask);
+                userType.AddEnumValue("ReferenceTypeConstraint", global::System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint);
+                userType.AddEnumValue("NotNullableValueTypeConstraint", global::System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint);
+                userType.AddEnumValue("DefaultConstructorConstraint", global::System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint);
+                userType.AddEnumValue("SpecialConstraintMask", global::System.Reflection.GenericParameterAttributes.SpecialConstraintMask);
+                xamlType = userType;
+                break;
+
+            case 16:   //  System.Type[]
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 17:   //  System.Array
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 18:   //  Guid
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 19:   //  System.Reflection.MemberTypes
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Constructor", global::System.Reflection.MemberTypes.Constructor);
+                userType.AddEnumValue("Event", global::System.Reflection.MemberTypes.Event);
+                userType.AddEnumValue("Field", global::System.Reflection.MemberTypes.Field);
+                userType.AddEnumValue("Method", global::System.Reflection.MemberTypes.Method);
+                userType.AddEnumValue("Property", global::System.Reflection.MemberTypes.Property);
+                userType.AddEnumValue("TypeInfo", global::System.Reflection.MemberTypes.TypeInfo);
+                userType.AddEnumValue("Custom", global::System.Reflection.MemberTypes.Custom);
+                userType.AddEnumValue("NestedType", global::System.Reflection.MemberTypes.NestedType);
+                userType.AddEnumValue("All", global::System.Reflection.MemberTypes.All);
+                xamlType = userType;
+                break;
+
+            case 20:   //  System.Reflection.Module
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 21:   //  System.Runtime.InteropServices.StructLayoutAttribute
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Attribute"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 22:   //  System.Attribute
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 23:   //  System.RuntimeTypeHandle
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 24:   //  System.Reflection.ConstructorInfo
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Reflection.MethodBase"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 25:   //  System.Collections.Generic.IEnumerable`1<System.Reflection.CustomAttributeData>
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 26:   //  HospitalServerManager.View.DoctorsPage
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainFrameView;
+                userType.Activator = Activate_26_DoctorsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  HospitalServerManager.View.PatientsPage
+            case 27:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 28:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 29:   //  HospitalServerManager.View.MainFrameView
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_PatientsPage;
+                userType.Activator = Activate_29_MainFrameView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  HospitalServerManager.View.RoomsPage
-                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_RoomsPage;
+            case 30:   //  HospitalServerManager.View.NewRecordDialog
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.AddMemberName("ValuesOfNewObject");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  HospitalServerManager.View.UserControls.ColumnListView
+            case 31:   //  Windows.UI.Xaml.Controls.ContentDialog
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 32:   //  Windows.UI.Xaml.Controls.ContentControl
+                xamlType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 33:   //  System.Collections.Generic.List`1<String>
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_33_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 34:   //  HospitalServerManager.View.PatientsPage
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_34_PatientsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  HospitalServerManager.View.RoomsPage
+                userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_35_RoomsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  HospitalServerManager.View.UserControls.ColumnListView
                 userType = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_8_ColumnListView;
+                userType.Activator = Activate_36_ColumnListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -319,11 +667,785 @@ namespace HospitalServerManager.HospitalServerManager_XamlTypeInfo
         }
 
 
+        private object get_0_RosterViewModel_ColumnNames(object instance)
+        {
+            var that = (global::HospitalServerManager.ViewModel.RosterViewModel)instance;
+            return that.ColumnNames;
+        }
+        private object get_1_RosterViewModel_ColumnTypes(object instance)
+        {
+            var that = (global::HospitalServerManager.ViewModel.RosterViewModel)instance;
+            return that.ColumnTypes;
+        }
+        private object get_2_RosterViewModel_EnumTypes(object instance)
+        {
+            var that = (global::HospitalServerManager.ViewModel.RosterViewModel)instance;
+            return that.EnumTypes;
+        }
+        private object get_3_Type_Assembly(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.Assembly;
+        }
+        private object get_4_Type_AssemblyQualifiedName(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.AssemblyQualifiedName;
+        }
+        private object get_5_Type_Attributes(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.Attributes;
+        }
+        private object get_6_Type_BaseType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.BaseType;
+        }
+        private object get_7_Type_ContainsGenericParameters(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.ContainsGenericParameters;
+        }
+        private object get_8_Type_DeclaringMethod(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.DeclaringMethod;
+        }
+        private object get_9_Type_DeclaringType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.DeclaringType;
+        }
+        private object get_10_Type_FullName(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.FullName;
+        }
+        private object get_11_Type_GenericParameterAttributes(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.GenericParameterAttributes;
+        }
+        private object get_12_Type_GenericParameterPosition(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.GenericParameterPosition;
+        }
+        private object get_13_Type_GenericTypeArguments(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.GenericTypeArguments;
+        }
+        private object get_14_Type_GUID(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.GUID;
+        }
+        private object get_15_Type_HasElementType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.HasElementType;
+        }
+        private object get_16_Type_IsAbstract(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsAbstract;
+        }
+        private object get_17_Type_IsAnsiClass(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsAnsiClass;
+        }
+        private object get_18_Type_IsArray(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsArray;
+        }
+        private object get_19_Type_IsAutoClass(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsAutoClass;
+        }
+        private object get_20_Type_IsAutoLayout(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsAutoLayout;
+        }
+        private object get_21_Type_IsByRef(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsByRef;
+        }
+        private object get_22_Type_IsClass(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsClass;
+        }
+        private object get_23_Type_IsCOMObject(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsCOMObject;
+        }
+        private object get_24_Type_IsConstructedGenericType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsConstructedGenericType;
+        }
+        private object get_25_Type_IsContextful(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsContextful;
+        }
+        private object get_26_Type_IsEnum(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsEnum;
+        }
+        private object get_27_Type_IsExplicitLayout(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsExplicitLayout;
+        }
+        private object get_28_Type_IsGenericParameter(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsGenericParameter;
+        }
+        private object get_29_Type_IsGenericType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsGenericType;
+        }
+        private object get_30_Type_IsGenericTypeDefinition(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsGenericTypeDefinition;
+        }
+        private object get_31_Type_IsImport(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsImport;
+        }
+        private object get_32_Type_IsInterface(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsInterface;
+        }
+        private object get_33_Type_IsLayoutSequential(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsLayoutSequential;
+        }
+        private object get_34_Type_IsMarshalByRef(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsMarshalByRef;
+        }
+        private object get_35_Type_IsNested(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNested;
+        }
+        private object get_36_Type_IsNestedAssembly(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedAssembly;
+        }
+        private object get_37_Type_IsNestedFamANDAssem(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedFamANDAssem;
+        }
+        private object get_38_Type_IsNestedFamily(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedFamily;
+        }
+        private object get_39_Type_IsNestedFamORAssem(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedFamORAssem;
+        }
+        private object get_40_Type_IsNestedPrivate(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedPrivate;
+        }
+        private object get_41_Type_IsNestedPublic(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNestedPublic;
+        }
+        private object get_42_Type_IsNotPublic(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsNotPublic;
+        }
+        private object get_43_Type_IsPointer(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsPointer;
+        }
+        private object get_44_Type_IsPrimitive(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsPrimitive;
+        }
+        private object get_45_Type_IsPublic(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsPublic;
+        }
+        private object get_46_Type_IsSealed(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSealed;
+        }
+        private object get_47_Type_IsSecurityCritical(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSecurityCritical;
+        }
+        private object get_48_Type_IsSecuritySafeCritical(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSecuritySafeCritical;
+        }
+        private object get_49_Type_IsSecurityTransparent(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSecurityTransparent;
+        }
+        private object get_50_Type_IsSerializable(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSerializable;
+        }
+        private object get_51_Type_IsSpecialName(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSpecialName;
+        }
+        private object get_52_Type_IsTypeDefinition(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsTypeDefinition;
+        }
+        private object get_53_Type_IsSZArray(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsSZArray;
+        }
+        private object get_54_Type_IsVariableBoundArray(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsVariableBoundArray;
+        }
+        private object get_55_Type_IsUnicodeClass(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsUnicodeClass;
+        }
+        private object get_56_Type_IsValueType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsValueType;
+        }
+        private object get_57_Type_IsVisible(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.IsVisible;
+        }
+        private object get_58_Type_MemberType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.MemberType;
+        }
+        private object get_59_Type_Module(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.Module;
+        }
+        private object get_60_Type_Namespace(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.Namespace;
+        }
+        private object get_61_Type_ReflectedType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.ReflectedType;
+        }
+        private object get_62_Type_StructLayoutAttribute(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.StructLayoutAttribute;
+        }
+        private object get_63_Type_TypeHandle(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.TypeHandle;
+        }
+        private object get_64_Type_TypeInitializer(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.TypeInitializer;
+        }
+        private object get_65_Type_UnderlyingSystemType(object instance)
+        {
+            var that = (global::System.Type)instance;
+            return that.UnderlyingSystemType;
+        }
+        private object get_66_MemberInfo_CustomAttributes(object instance)
+        {
+            var that = (global::System.Reflection.MemberInfo)instance;
+            return that.CustomAttributes;
+        }
+        private object get_67_MemberInfo_MetadataToken(object instance)
+        {
+            var that = (global::System.Reflection.MemberInfo)instance;
+            return that.MetadataToken;
+        }
+        private object get_68_MemberInfo_Name(object instance)
+        {
+            var that = (global::System.Reflection.MemberInfo)instance;
+            return that.Name;
+        }
+        private object get_69_NewRecordDialog_ValuesOfNewObject(object instance)
+        {
+            var that = (global::HospitalServerManager.View.NewRecordDialog)instance;
+            return that.ValuesOfNewObject;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "HospitalServerManager.ViewModel.RosterViewModel.ColumnNames":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("HospitalServerManager.ViewModel.RosterViewModel");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "ColumnNames", "System.Collections.Generic.IEnumerable`1<String>");
+                xamlMember.Getter = get_0_RosterViewModel_ColumnNames;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "HospitalServerManager.ViewModel.RosterViewModel.ColumnTypes":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("HospitalServerManager.ViewModel.RosterViewModel");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "ColumnTypes", "System.Collections.Generic.IDictionary`2<Int32, String>");
+                xamlMember.Getter = get_1_RosterViewModel_ColumnTypes;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "HospitalServerManager.ViewModel.RosterViewModel.EnumTypes":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("HospitalServerManager.ViewModel.RosterViewModel");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "EnumTypes", "System.Collections.Generic.Dictionary`2<String, System.Type>");
+                xamlMember.Getter = get_2_RosterViewModel_EnumTypes;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.Assembly":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "Assembly", "System.Reflection.Assembly");
+                xamlMember.Getter = get_3_Type_Assembly;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.AssemblyQualifiedName":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "AssemblyQualifiedName", "String");
+                xamlMember.Getter = get_4_Type_AssemblyQualifiedName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.Attributes":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "Attributes", "System.Reflection.TypeAttributes");
+                xamlMember.Getter = get_5_Type_Attributes;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.BaseType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "BaseType", "System.Type");
+                xamlMember.Getter = get_6_Type_BaseType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.ContainsGenericParameters":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "ContainsGenericParameters", "Boolean");
+                xamlMember.Getter = get_7_Type_ContainsGenericParameters;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.DeclaringMethod":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "DeclaringMethod", "System.Reflection.MethodBase");
+                xamlMember.Getter = get_8_Type_DeclaringMethod;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.DeclaringType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "DeclaringType", "System.Type");
+                xamlMember.Getter = get_9_Type_DeclaringType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.FullName":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "FullName", "String");
+                xamlMember.Getter = get_10_Type_FullName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.GenericParameterAttributes":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "GenericParameterAttributes", "System.Reflection.GenericParameterAttributes");
+                xamlMember.Getter = get_11_Type_GenericParameterAttributes;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.GenericParameterPosition":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "GenericParameterPosition", "Int32");
+                xamlMember.Getter = get_12_Type_GenericParameterPosition;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.GenericTypeArguments":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "GenericTypeArguments", "System.Type[]");
+                xamlMember.Getter = get_13_Type_GenericTypeArguments;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.GUID":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "GUID", "Guid");
+                xamlMember.Getter = get_14_Type_GUID;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.HasElementType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "HasElementType", "Boolean");
+                xamlMember.Getter = get_15_Type_HasElementType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsAbstract":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsAbstract", "Boolean");
+                xamlMember.Getter = get_16_Type_IsAbstract;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsAnsiClass":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsAnsiClass", "Boolean");
+                xamlMember.Getter = get_17_Type_IsAnsiClass;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsArray":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsArray", "Boolean");
+                xamlMember.Getter = get_18_Type_IsArray;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsAutoClass":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsAutoClass", "Boolean");
+                xamlMember.Getter = get_19_Type_IsAutoClass;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsAutoLayout":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsAutoLayout", "Boolean");
+                xamlMember.Getter = get_20_Type_IsAutoLayout;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsByRef":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsByRef", "Boolean");
+                xamlMember.Getter = get_21_Type_IsByRef;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsClass":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsClass", "Boolean");
+                xamlMember.Getter = get_22_Type_IsClass;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsCOMObject":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsCOMObject", "Boolean");
+                xamlMember.Getter = get_23_Type_IsCOMObject;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsConstructedGenericType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsConstructedGenericType", "Boolean");
+                xamlMember.Getter = get_24_Type_IsConstructedGenericType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsContextful":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsContextful", "Boolean");
+                xamlMember.Getter = get_25_Type_IsContextful;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsEnum":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsEnum", "Boolean");
+                xamlMember.Getter = get_26_Type_IsEnum;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsExplicitLayout":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsExplicitLayout", "Boolean");
+                xamlMember.Getter = get_27_Type_IsExplicitLayout;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsGenericParameter":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsGenericParameter", "Boolean");
+                xamlMember.Getter = get_28_Type_IsGenericParameter;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsGenericType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsGenericType", "Boolean");
+                xamlMember.Getter = get_29_Type_IsGenericType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsGenericTypeDefinition":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsGenericTypeDefinition", "Boolean");
+                xamlMember.Getter = get_30_Type_IsGenericTypeDefinition;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsImport":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsImport", "Boolean");
+                xamlMember.Getter = get_31_Type_IsImport;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsInterface":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsInterface", "Boolean");
+                xamlMember.Getter = get_32_Type_IsInterface;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsLayoutSequential":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsLayoutSequential", "Boolean");
+                xamlMember.Getter = get_33_Type_IsLayoutSequential;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsMarshalByRef":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsMarshalByRef", "Boolean");
+                xamlMember.Getter = get_34_Type_IsMarshalByRef;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNested":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNested", "Boolean");
+                xamlMember.Getter = get_35_Type_IsNested;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedAssembly":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedAssembly", "Boolean");
+                xamlMember.Getter = get_36_Type_IsNestedAssembly;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedFamANDAssem":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedFamANDAssem", "Boolean");
+                xamlMember.Getter = get_37_Type_IsNestedFamANDAssem;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedFamily":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedFamily", "Boolean");
+                xamlMember.Getter = get_38_Type_IsNestedFamily;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedFamORAssem":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedFamORAssem", "Boolean");
+                xamlMember.Getter = get_39_Type_IsNestedFamORAssem;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedPrivate":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedPrivate", "Boolean");
+                xamlMember.Getter = get_40_Type_IsNestedPrivate;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNestedPublic":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNestedPublic", "Boolean");
+                xamlMember.Getter = get_41_Type_IsNestedPublic;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsNotPublic":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsNotPublic", "Boolean");
+                xamlMember.Getter = get_42_Type_IsNotPublic;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsPointer":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsPointer", "Boolean");
+                xamlMember.Getter = get_43_Type_IsPointer;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsPrimitive":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsPrimitive", "Boolean");
+                xamlMember.Getter = get_44_Type_IsPrimitive;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsPublic":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsPublic", "Boolean");
+                xamlMember.Getter = get_45_Type_IsPublic;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSealed":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSealed", "Boolean");
+                xamlMember.Getter = get_46_Type_IsSealed;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSecurityCritical":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSecurityCritical", "Boolean");
+                xamlMember.Getter = get_47_Type_IsSecurityCritical;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSecuritySafeCritical":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSecuritySafeCritical", "Boolean");
+                xamlMember.Getter = get_48_Type_IsSecuritySafeCritical;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSecurityTransparent":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSecurityTransparent", "Boolean");
+                xamlMember.Getter = get_49_Type_IsSecurityTransparent;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSerializable":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSerializable", "Boolean");
+                xamlMember.Getter = get_50_Type_IsSerializable;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSpecialName":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSpecialName", "Boolean");
+                xamlMember.Getter = get_51_Type_IsSpecialName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsTypeDefinition":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsTypeDefinition", "Boolean");
+                xamlMember.Getter = get_52_Type_IsTypeDefinition;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsSZArray":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsSZArray", "Boolean");
+                xamlMember.Getter = get_53_Type_IsSZArray;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsVariableBoundArray":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsVariableBoundArray", "Boolean");
+                xamlMember.Getter = get_54_Type_IsVariableBoundArray;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsUnicodeClass":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsUnicodeClass", "Boolean");
+                xamlMember.Getter = get_55_Type_IsUnicodeClass;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsValueType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsValueType", "Boolean");
+                xamlMember.Getter = get_56_Type_IsValueType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.IsVisible":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "IsVisible", "Boolean");
+                xamlMember.Getter = get_57_Type_IsVisible;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.MemberType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "MemberType", "System.Reflection.MemberTypes");
+                xamlMember.Getter = get_58_Type_MemberType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.Module":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "Module", "System.Reflection.Module");
+                xamlMember.Getter = get_59_Type_Module;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.Namespace":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "Namespace", "String");
+                xamlMember.Getter = get_60_Type_Namespace;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.ReflectedType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "ReflectedType", "System.Type");
+                xamlMember.Getter = get_61_Type_ReflectedType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.StructLayoutAttribute":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "StructLayoutAttribute", "System.Runtime.InteropServices.StructLayoutAttribute");
+                xamlMember.Getter = get_62_Type_StructLayoutAttribute;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.TypeHandle":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "TypeHandle", "System.RuntimeTypeHandle");
+                xamlMember.Getter = get_63_Type_TypeHandle;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.TypeInitializer":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "TypeInitializer", "System.Reflection.ConstructorInfo");
+                xamlMember.Getter = get_64_Type_TypeInitializer;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Type.UnderlyingSystemType":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Type");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "UnderlyingSystemType", "System.Type");
+                xamlMember.Getter = get_65_Type_UnderlyingSystemType;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Reflection.MemberInfo.CustomAttributes":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Reflection.MemberInfo");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "CustomAttributes", "System.Collections.Generic.IEnumerable`1<System.Reflection.CustomAttributeData>");
+                xamlMember.Getter = get_66_MemberInfo_CustomAttributes;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Reflection.MemberInfo.MetadataToken":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Reflection.MemberInfo");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "MetadataToken", "Int32");
+                xamlMember.Getter = get_67_MemberInfo_MetadataToken;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "System.Reflection.MemberInfo.Name":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Reflection.MemberInfo");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_68_MemberInfo_Name;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "HospitalServerManager.View.NewRecordDialog.ValuesOfNewObject":
+                userType = (global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("HospitalServerManager.View.NewRecordDialog");
+                xamlMember = new global::HospitalServerManager.HospitalServerManager_XamlTypeInfo.XamlMember(this, "ValuesOfNewObject", "System.Collections.Generic.List`1<String>");
+                xamlMember.Getter = get_69_NewRecordDialog_ValuesOfNewObject;
+                xamlMember.SetIsReadOnly();
+                break;
+            }
             return xamlMember;
         }
     }

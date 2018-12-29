@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.ViewModel.Controllers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,15 +24,39 @@ namespace HospitalServerManager.View
     /// </summary>
     public sealed partial class MainFrameView : Page
     {
-        
-        public MainFrameView()
+		private INavigator Navigator { get; set; }
+		private IProvideType TypeProvider { get; set; }
+		public MainFrameView()
         {
             this.InitializeComponent();
+			InitializeProperties();
         }
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(typeof(PatientsPage), new HospitalServerManager.ViewModel.Controllers.DatabaseReader());
+			string pageTypeName = (sender as AppBarButton).Tag.ToString();
+			Type pageType = TypeProvider.GetTypeFromString(pageTypeName);
+
+			IPageNavigateable page = Navigator.ChangeFrame(pageType, mainFrame);
+			//mainFrame.Navigate(typeof(PatientsPage), new HospitalServerManager.ViewModel.Controllers.DatabaseReader());
             //Frame.Navigate(typeof(PatientsPage)); 
         }
-    }
+		private void InitializeProperties()
+		{
+			IValidateIfInterfaceIsImplemented validator = new ViewModel.Validators.InterfaceImplementValidator();
+			//mainFrame.Content = new AdmissionsPage();
+			Navigator = new ViewNavigator(validator, /*mainFrame.Content as IPageNavigateable*/new PatientsPage());
+			//Navigator.SetParameter(controler);
+			// TODO: Dodać pozostałe Page
+			TypeProvider = new ViewModel.DataProvider.NavigationPageTypeProvider(validator,
+				new List<Type>
+				{
+					typeof(PatientsPage), typeof(DoctorsPage),
+				});
+			Type pageType = TypeProvider.GetTypeFromString("PatientsPage");
+
+			Navigator.ChangeFrame(pageType, mainFrame);
+			/*Type type = typeof(Model.Patient);
+            type.In*/
+		}
+	}
 }

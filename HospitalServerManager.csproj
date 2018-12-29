@@ -99,6 +99,8 @@
     <Compile Include="InterfacesAndEnums\Extensions.cs" />
     <Compile Include="InterfacesAndEnums\Interfaces.cs" />
     <Compile Include="Model\Basic\Admission.cs" />
+    <Compile Include="Model\Controllers\ApiCommandProvider.cs" />
+    <Compile Include="Model\Controllers\WebService.cs" />
     <Compile Include="Model\RangeObservableCollection.cs" />
     <Compile Include="ViewModel\AdmissionViewModel.cs" />
     <Compile Include="ViewModel\Controllers\DatabaseReader.cs" />
@@ -110,17 +112,24 @@
     <Compile Include="Model\Basic\SqlTable.cs" />
     <Compile Include="Model\Basic\Surgery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Controllers\ViewNavigator.cs" />
+    <Compile Include="ViewModel\DataProvider\NavigationPageTypeProvider.cs" />
+    <Compile Include="ViewModel\DataProvider\TypeProvider.cs" />
     <Compile Include="ViewModel\DiagnosisViewModel.cs" />
     <Compile Include="ViewModel\DoctorViewModel.cs" />
     <Compile Include="ViewModel\PatientViewModel.cs" />
     <Compile Include="ViewModel\RoomViewModel.cs" />
     <Compile Include="ViewModel\RosterViewModel.cs" />
     <Compile Include="ViewModel\SurgeryViewModel.cs" />
+    <Compile Include="ViewModel\Validators\InterfaceImplementValidator.cs" />
     <Compile Include="View\DoctorsPage.xaml.cs">
       <DependentUpon>DoctorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainFrameView.xaml.cs">
       <DependentUpon>MainFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewRecordDialog.xaml.cs">
+      <DependentUpon>NewRecordDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PatientsPage.xaml.cs">
       <DependentUpon>PatientsPage.xaml</DependentUpon>
@@ -161,6 +170,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NewRecordDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PatientsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +190,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

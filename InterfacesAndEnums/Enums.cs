@@ -61,7 +61,7 @@ namespace HospitalServerManager.InterfacesAndEnums
         Stable,
         [Description("ZAGROŻONY")]
         Endangered,
-        [Description("NULL")]
+        [Description("null")]
         None,
     }
 

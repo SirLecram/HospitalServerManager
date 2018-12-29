@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalServerManager.ViewModel
 {
+	//Zmienic interfejs na taki dla viewmodeli
     class PatientViewModel : ISqlTableModelable
     {
         private Patient model;

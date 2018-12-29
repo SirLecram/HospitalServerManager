@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +22,7 @@ namespace HospitalServerManager.View
 	/// <summary>
 	/// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
 	/// </summary>
-	public sealed partial class DoctorsPage : Page
+	public sealed partial class DoctorsPage : Page, IPageNavigateable
 	{
 		public DoctorsPage()
 		{
@@ -65,16 +67,20 @@ namespace HospitalServerManager.View
 		}
 		#endregion
 
-		protected override void OnNavigatedTo(NavigationEventArgs e)
+		protected override async void OnNavigatedTo(NavigationEventArgs e)
 		{
-			//databaseReader = e.Parameter as HospitalServerManager.ViewModel.Controllers.DatabaseReader;
-			//_IsDataLoaded = false;
-			// DatabaseController.OnPropertyChanged("IsDataLoaded");
+			await RosterViewModel.Read(typeof(DoctorViewModel), "Lekarze");
 		}
 
 		private async void Page_Loaded(object sender, RoutedEventArgs e)
 		{
 			databaseView.ItemsSource = RosterViewModel.ModelsCollection;
+			sortComboBox.ItemsSource = RosterViewModel.ColumnNames;
+		}
+
+		public void UnloadPage()
+		{
+			//throw new NotImplementedException();
 		}
 	}
 }

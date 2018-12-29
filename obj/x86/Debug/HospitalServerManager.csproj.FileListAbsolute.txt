@@ -920,3 +920,10 @@ C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\
 C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\obj\x86\Debug\View\RoomsPage.xbf
 C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\DoctorsPage.xbf
 C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\RoomsPage.xbf
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\obj\x86\Debug\View\NewRecordDialog.g.i.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\obj\x86\Debug\View\NewRecordDialog.g.cs
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\obj\x86\Debug\View\NewRecordDialog.xaml
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\obj\x86\Debug\View\NewRecordDialog.xbf
+C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\NewRecordDialog.xbf

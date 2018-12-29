@@ -30,13 +30,17 @@
     <AppXManifest Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-12-22T14:48:40.212</Modified>
+      <Modified>2018-12-28T18:47:53.642</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\HospitalServerManager.exe">
       <PackagePath>entrypoint\HospitalServerManager.exe</PackagePath>
-      <Modified>2018-12-22T14:48:38.442</Modified>
+      <Modified>2018-12-28T18:47:53.301</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2018-11-27T17:07:34.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.9\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -734,31 +738,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\HospitalServerManager.xr.xml">
       <PackagePath>HospitalServerManager.xr.xml</PackagePath>
-      <Modified>2018-12-22T14:47:35.175</Modified>
+      <Modified>2018-12-28T18:09:39.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.238</Modified>
+      <Modified>2018-12-28T18:47:53.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\DoctorsPage.xbf">
       <PackagePath>View\DoctorsPage.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.239</Modified>
+      <Modified>2018-12-28T18:47:53.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\MainFrameView.xbf">
       <PackagePath>View\MainFrameView.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.239</Modified>
+      <Modified>2018-12-28T18:47:53.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\NewRecordDialog.xbf">
+      <PackagePath>View\NewRecordDialog.xbf</PackagePath>
+      <Modified>2018-12-28T18:47:53.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\PatientsPage.xbf">
       <PackagePath>View\PatientsPage.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.239</Modified>
+      <Modified>2018-12-28T18:47:53.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\RoomsPage.xbf">
       <PackagePath>View\RoomsPage.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.240</Modified>
+      <Modified>2018-12-28T18:47:53.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\UserControls\ColumnListView.xbf">
       <PackagePath>View\UserControls\ColumnListView.xbf</PackagePath>
-      <Modified>2018-12-22T14:48:38.240</Modified>
+      <Modified>2018-12-28T18:47:53.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -766,11 +774,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2018-12-22T14:48:39.660</Modified>
+      <Modified>2018-12-28T18:09:40.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\Core\HospitalServerManager.exe">
       <PackagePath>HospitalServerManager.exe</PackagePath>
-      <Modified>2018-12-22T14:48:40.201</Modified>
+      <Modified>2018-12-28T18:47:53.637</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
