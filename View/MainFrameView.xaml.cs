@@ -19,9 +19,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace HospitalServerManager.View
 {
-    /// <summary>
-    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-    /// </summary>
+    /// WebService powinien byc chyba wlasciwoscia w roznych kontrolerach np. GetController/PutController itp.
     public sealed partial class MainFrameView : Page
     {
 		private INavigator Navigator { get; set; }
@@ -37,26 +35,21 @@ namespace HospitalServerManager.View
 			Type pageType = TypeProvider.GetTypeFromString(pageTypeName);
 
 			IPageNavigateable page = Navigator.ChangeFrame(pageType, mainFrame);
-			//mainFrame.Navigate(typeof(PatientsPage), new HospitalServerManager.ViewModel.Controllers.DatabaseReader());
-            //Frame.Navigate(typeof(PatientsPage)); 
         }
 		private void InitializeProperties()
 		{
 			IValidateIfInterfaceIsImplemented validator = new ViewModel.Validators.InterfaceImplementValidator();
-			//mainFrame.Content = new AdmissionsPage();
-			Navigator = new ViewNavigator(validator, /*mainFrame.Content as IPageNavigateable*/new PatientsPage());
-			//Navigator.SetParameter(controler);
+			Navigator = new ViewNavigator(validator, new PatientsPage());
 			// TODO: Dodać pozostałe Page
 			TypeProvider = new ViewModel.DataProvider.NavigationPageTypeProvider(validator,
 				new List<Type>
 				{
-					typeof(PatientsPage), typeof(DoctorsPage),
+					typeof(PatientsPage), typeof(DoctorsPage), typeof(AdmissionsPage), typeof(DiagnosesPage),
+					typeof(RoomsPage),
 				});
-			Type pageType = TypeProvider.GetTypeFromString("PatientsPage");
+			Type pageType = TypeProvider.GetTypeFromString("AdmissionsPage");
 
 			Navigator.ChangeFrame(pageType, mainFrame);
-			/*Type type = typeof(Model.Patient);
-            type.In*/
 		}
 	}
 }

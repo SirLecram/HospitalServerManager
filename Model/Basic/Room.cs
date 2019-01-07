@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,13 @@ namespace HospitalServerManager.Model.Basic
 			if (int.TryParse(listOfValues[1], out int placesNumber))
 				PlacesNumber = placesNumber;
 			IsSpecialCare = bool.Parse(listOfValues[2]);
+		}
+		[JsonConstructor]
+		protected Room(int roomNumber, int numberOfBeds, bool increasedCare)
+			:base(roomNumber.ToString(), "Nr_sali", new List<string>())
+		{
+			PlacesNumber = numberOfBeds;
+			IsSpecialCare = increasedCare;
 		}
     }
 }

@@ -8,11 +8,11 @@ using HospitalServerManager.Model.Controllers;
 
 namespace HospitalServerManager.Model.Basic
 {
-    internal abstract class SqlTable : ISqlTableModelable
+    internal abstract class SqlTable : ISqlTableModel
     {
 		// TODO: Dodac table do klas modelu
 		public string PrimaryKey { get; protected set; }
-        protected string PrimaryKeyName { get; set; }
+        public string PrimaryKeyName { get; set; }
         protected List<string> ColumnNames { get; set; }
         protected SqlTable()
         {
@@ -27,19 +27,9 @@ namespace HospitalServerManager.Model.Basic
             ColumnNames = columnNames;
         }
 
-        public string GetPrimaryKey()
-        {
-            return PrimaryKey;
-        }
-
-        public string GetPrimaryKeyName()
-        {
-            return PrimaryKeyName;
-        }
-
-        public List<string> GetColumnNames()
-        {
-            return ColumnNames;
-        }
-    }
+		public List<string> GetColumnNames()
+		{
+			return ColumnNames;
+		}
+	}
 }

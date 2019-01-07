@@ -559,8 +559,17 @@
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\AdmissionsPage.xbf">
+      <PackagePath>View\AdmissionsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\DiagnosesPage.xbf">
+      <PackagePath>View\DiagnosesPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\DoctorsPage.xbf">
       <PackagePath>View\DoctorsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\EditRecordDialog.xbf">
+      <PackagePath>View\EditRecordDialog.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\MainFrameView.xbf">
       <PackagePath>View\MainFrameView.xbf</PackagePath>

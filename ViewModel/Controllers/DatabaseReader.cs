@@ -11,12 +11,12 @@ namespace HospitalServerManager.ViewModel.Controllers
 {
     class DatabaseReader
     {
-        private List<ISqlTableModelable> _ModelsList { get; set; }
+        private List<ISqlTableModel> _ModelsList { get; set; }
        
-        public IReadOnlyList<ISqlTableModelable> LastReadedModels { get => _ModelsList; }
+        public IReadOnlyList<ISqlTableModel> LastReadedModels { get => _ModelsList; }
         public DatabaseReader()
         {
-            _ModelsList = new List<ISqlTableModelable>();
+            _ModelsList = new List<ISqlTableModel>();
 
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace HospitalServerManager.ViewModel.Controllers
                                 }
                                 var model = Activator.CreateInstance(typeOfModel, valueList);
 
-                                _ModelsList.Add(model as ISqlTableModelable);
+                                _ModelsList.Add(model as ISqlTableModel);
                             }
                             return true;
                         }

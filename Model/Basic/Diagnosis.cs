@@ -1,4 +1,5 @@
 ﻿using HospitalServerManager.InterfacesAndEnums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,14 @@ namespace HospitalServerManager.Model.Basic
 			Name = listOfValues[1];
 			FieldOfSurgery = listOfValues[2].GetEnumFromDescription<SurgeryField>();
 			Description = listOfValues[3];
+		}
+		[JsonConstructor]
+		protected Diagnosis(string icdSymbol, string name, string fieldOfSurgery, string description)
+			: base(icdSymbol, "Symbol_ICD", new List<string>())
+		{
+			Name = name;
+			FieldOfSurgery = fieldOfSurgery.GetEnumFromDescription<SurgeryField>();
+			Description = description;
 		}
     }
 }

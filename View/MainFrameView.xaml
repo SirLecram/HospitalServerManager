@@ -15,9 +15,9 @@
         </Grid.RowDefinitions>
         <CommandBar FlowDirection="LeftToRight" VerticalAlignment="Top" Style="{StaticResource CommandBarRevealStyle}" 
                     Name="navigationBar" Grid.Row="0">
-            <AppBarButton Icon="Street" Label="Sale" Tag="6" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="Cut" Label="Operacje" Tag="5" Click="AppBarButton_Click" />
-            <AppBarButton Icon="Paste" Label="Diagnozy" Tag="4" Click="AppBarButton_Click" />
+            <AppBarButton Icon="Street" Label="Sale" Tag="RoomsPage" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Cut" Label="Operacje" Tag="SurgerionPage" Click="AppBarButton_Click" />
+            <AppBarButton Icon="Paste" Label="Diagnozy" Tag="DiagnosesPage" Click="AppBarButton_Click" />
             <AppBarButton Icon="WebCam" Label="Pracownicy" Tag="DoctorsPage" Click="AppBarButton_Click"/>
             <AppBarButton Icon="People" Label="Pacjenci" Tag="PatientsPage" Click="AppBarButton_Click" />
             <AppBarButton Icon="AddFriend" Label="Przyjęcia" Tag="AdmissionsPage" Click="AppBarButton_Click"/>

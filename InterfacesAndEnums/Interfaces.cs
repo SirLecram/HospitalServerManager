@@ -7,8 +7,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace HospitalServerManager.InterfacesAndEnums
 {
-    public interface ISqlTableModelable : IPrimaryKeyGetable
+    public interface ISqlTableModel
     {
+
         List<string> GetColumnNames();
     }
     public interface IPrimaryKeyGetable

@@ -128,7 +128,20 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="HospitalServerManager.View.AdmissionsPage" />
+    <RootType FullName="HospitalServerManager.View.DiagnosesPage" />
     <RootType FullName="HospitalServerManager.View.DoctorsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
+      <RootProperty Name="Title" />
+      <RootProperty Name="PrimaryButtonText" />
+      <RootProperty Name="SecondaryButtonText" />
+      <RootProperty Name="DefaultButton" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="PrimaryButtonClick" />
+      <RootEvent Name="SecondaryButtonClick" />
+    </RootType>
+    <RootType FullName="HospitalServerManager.View.EditRecordDialog" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Name" />
       <RootProperty Name="FlowDirection" />
@@ -148,14 +161,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="HospitalServerManager.View.MainFrameView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
-      <RootProperty Name="Title" />
-      <RootProperty Name="PrimaryButtonText" />
-      <RootProperty Name="SecondaryButtonText" />
-      <RootProperty Name="Content" />
-      <RootEvent Name="PrimaryButtonClick" />
-      <RootEvent Name="SecondaryButtonClick" />
-    </RootType>
     <RootType FullName="HospitalServerManager.View.NewRecordDialog" />
     <RootType FullName="HospitalServerManager.View.PatientsPage" />
     <RootType FullName="HospitalServerManager.View.RoomsPage" />

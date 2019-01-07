@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalServerManager.ViewModel
 {
-	class DiagnosisViewModel
+	class DiagnosisViewModel : IPrimaryKeyGetable
 	{
 		private Diagnosis model;
 		public string PrimaryKey { get => model.PrimaryKey; }
@@ -19,6 +19,16 @@ namespace HospitalServerManager.ViewModel
 		public DiagnosisViewModel(Diagnosis model)
 		{
 			this.model = model;
+		}
+
+		public string GetPrimaryKey()
+		{
+			return PrimaryKey;
+		}
+
+		public string GetPrimaryKeyName()
+		{
+			return model.PrimaryKeyName;
 		}
 	}
 }

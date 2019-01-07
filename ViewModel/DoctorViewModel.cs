@@ -8,7 +8,7 @@ using HospitalServerManager.Model.Basic;
 
 namespace HospitalServerManager.ViewModel
 {
-	class DoctorViewModel : ISqlTableModelable // TODO: Dodać intrefejs dla VIEW MODEL!!
+	class DoctorViewModel : IPrimaryKeyGetable // TODO: Dodać intrefejs dla VIEW MODEL!!
 	{
 		private Doctor model;
 		public string PrimaryKey { get => model.PrimaryKey; }
@@ -24,19 +24,14 @@ namespace HospitalServerManager.ViewModel
 			this.model = model;
 		}
 
-		public List<string> GetColumnNames()
-		{
-			throw new NotImplementedException();
-		}
-
 		public string GetPrimaryKey()
 		{
-			throw new NotImplementedException();
+			return PrimaryKey;
 		}
 
 		public string GetPrimaryKeyName()
 		{
-			throw new NotImplementedException();
+			return model.PrimaryKeyName;
 		}
 	}
 }

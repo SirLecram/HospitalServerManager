@@ -122,8 +122,17 @@
     <Compile Include="ViewModel\RosterViewModel.cs" />
     <Compile Include="ViewModel\SurgeryViewModel.cs" />
     <Compile Include="ViewModel\Validators\InterfaceImplementValidator.cs" />
+    <Compile Include="View\AdmissionsPage.xaml.cs">
+      <DependentUpon>AdmissionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DiagnosesPage.xaml.cs">
+      <DependentUpon>DiagnosesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DoctorsPage.xaml.cs">
       <DependentUpon>DoctorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditRecordDialog.xaml.cs">
+      <DependentUpon>EditRecordDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainFrameView.xaml.cs">
       <DependentUpon>MainFrameView.xaml</DependentUpon>
@@ -162,7 +171,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AdmissionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DiagnosesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DoctorsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditRecordDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

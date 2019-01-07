@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace HospitalServerManager.Model.Basic
     class Admission : SqlTable
     {
 		public DateTime AdmissionDate { get; protected set; }
-		public DateTime LeavingDate { get; protected set; }
+		public DateTime? LeavingDate { get; protected set; }
 		public string PatientPESEL { get; protected set; }
 		public string DiagnosisSymbol { get; protected set; }
 		public int MainDoctor { get; protected set; }
@@ -29,6 +30,20 @@ namespace HospitalServerManager.Model.Basic
 			OperationID = int.Parse(listOfValues[6]);
 			RoomNumber = int.Parse(listOfValues[7]);
 			IsPlanned = bool.Parse(listOfValues[8]);
+		}
+		[JsonConstructor]
+		protected Admission(string admissionID, DateTime admissionDate, DateTime? endDate, string patientPESEL, string diagnosisSymbol,
+			int mainDoctor, int planedOperation, int roomNumber, bool isPlanned) 
+			: base (admissionID, "Id_przyjecia", new List<string>())
+		{
+			AdmissionDate = admissionDate;
+			LeavingDate = endDate ?? null;
+			PatientPESEL = patientPESEL;
+			DiagnosisSymbol = diagnosisSymbol;
+			MainDoctor = mainDoctor;
+			OperationID = planedOperation;
+			RoomNumber = roomNumber;
+			IsPlanned = isPlanned;
 		}
     }
 }

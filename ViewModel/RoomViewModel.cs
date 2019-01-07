@@ -1,4 +1,5 @@
-﻿using HospitalServerManager.Model.Basic;
+﻿using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.Model.Basic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalServerManager.ViewModel
 {
-	class RoomViewModel
+	class RoomViewModel : IPrimaryKeyGetable
 	{
 		private Room model;
 		public string PrimaryKey { get => model.PrimaryKey; }
@@ -17,6 +18,16 @@ namespace HospitalServerManager.ViewModel
 		public RoomViewModel(Room model)
 		{
 			this.model = model;
+		}
+
+		public string GetPrimaryKey()
+		{
+			return PrimaryKey;
+		}
+
+		public string GetPrimaryKeyName()
+		{
+			return model.PrimaryKeyName;
 		}
 	}
 }

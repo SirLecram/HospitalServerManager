@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HospitalServerManager.ViewModel
 {
 	//Zmienic interfejs na taki dla viewmodeli
-    class PatientViewModel : ISqlTableModelable
+    class PatientViewModel : IPrimaryKeyGetable
     {
         private Patient model;
         public string PrimaryKey { get => model.PrimaryKey; }
@@ -24,19 +24,14 @@ namespace HospitalServerManager.ViewModel
             model = patient;
         }
 
-        public List<string> GetColumnNames()
-        {
-            throw new NotImplementedException();
-        }
-
         public string GetPrimaryKey()
         {
-            throw new NotImplementedException();
+			return PrimaryKey;
         }
 
         public string GetPrimaryKeyName()
         {
-            throw new NotImplementedException();
+			return model.PrimaryKeyName;
         }
     }
 }

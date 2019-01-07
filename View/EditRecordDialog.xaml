@@ -1,0 +1,39 @@
+﻿<ContentDialog
+    x:Class="HospitalServerManager.View.EditRecordDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HospitalServerManager.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="TITLE"
+    PrimaryButtonText="Potwierź"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonText="Anuluj" DefaultButton="Secondary" MinWidth="800">
+
+
+    <Grid Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ComboBox Name="fieldToEdit" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                  Margin="20" Grid.Row="0" SelectionChanged="FieldToEdit_SelectionChanged" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="additionalTypeInfo" Text="Typ: " HorizontalAlignment="Center" Foreground="#FFBD8989"
+                       Margin="0, 5, 0, 5" FontSize="12"/>
+            <TextBlock Text="Format: " Name="additionalFormatInfo" HorizontalAlignment="Center" Foreground="#FFBD8989"
+                       Margin="0, 5, 0, 5" FontSize="12"/>
+            <TextBlock Grid.Row="1" Text="DODATKOWE INFO" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Gray" Name="additionalFilterInfo"/>
+        </StackPanel>
+
+      <!--  <TextBox Name="valueToUpdateTextBox" HorizontalAlignment="Stretch" VerticalAlignment="Center"  
+                 Grid.Column="1" Margin="20" Grid.Row="2"/> -->
+
+    </Grid>
+</ContentDialog>

@@ -60,7 +60,7 @@ namespace HospitalServerManager.View
 				grid.Children.Add(descriptionTextBlock);
 				Grid.SetRow(descriptionTextBlock, rowIndex);
 				// TODO: Dopisac pozostałe wyjatki dla pozostalych widokow
-				if (typesOfColumn[rowIndex] == "date")
+				if (typesOfColumn[rowIndex].ToLower() == "date")
 					descriptionTextBlock.Text = "Format: RRRR-MM-DD";
 				else if (value == "PESEL")
 					descriptionTextBlock.Text = "Format: 11 cyfr";

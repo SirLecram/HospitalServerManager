@@ -1,4 +1,5 @@
-﻿using HospitalServerManager.Model.Basic;
+﻿using HospitalServerManager.InterfacesAndEnums;
+using HospitalServerManager.Model.Basic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace HospitalServerManager.ViewModel
 {
-	class AdmissionViewModel
+	class AdmissionViewModel : IPrimaryKeyGetable
 	{
 		private Admission model;
 		public string PrimaryKey { get => model.PrimaryKey; }
 		public DateTime AdmissionDate { get => model.AdmissionDate; }
-		public DateTime LeavingDate { get => model.LeavingDate; }
+		public DateTime? LeavingDate { get => model.LeavingDate; }
 		public string PatientPESEL { get => model.PatientPESEL; }
 		public string DiagnosisSymbol { get => model.DiagnosisSymbol; }
 		public int MainDoctor { get => model.MainDoctor; }
@@ -23,6 +24,16 @@ namespace HospitalServerManager.ViewModel
 		public AdmissionViewModel(Admission model)
 		{
 			this.model = model;
+		}
+
+		public string GetPrimaryKey()
+		{
+			return PrimaryKey;
+		}
+
+		public string GetPrimaryKeyName()
+		{
+			return model.PrimaryKeyName;
 		}
 	}
 }

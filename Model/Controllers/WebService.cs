@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using HospitalServerManager.InterfacesAndEnums;
 using Newtonsoft.Json;
 using System.IO;
+using HospitalServerManager.Model.Basic;
 
 namespace HospitalServerManager.Model.Controllers
 {
@@ -32,21 +33,41 @@ namespace HospitalServerManager.Model.Controllers
 		{
 			httpClient.BaseAddress = baseAdress;
 			httpClient.DefaultRequestHeaders.Clear();
-			//httpClient.DefaultRequestHeaders.Add("JSON", new MediaTypeWithQualityHeaderValue("application/json"));
 		}
 
 		public async Task<IEnumerable<T>> GetRecordAsync<T>(string tableName)
 		{
 			// TODO: SPRAWDZIC CZY IMPLEMENTUJE INTERFACE!!
-			List<ISqlTableModelable> modelsList = new List<ISqlTableModelable>();
-			//using (var client = httpClient)
+			List<ISqlTableModel> modelsList = new List<ISqlTableModel>();
 			using (var message = new HttpRequestMessage(HttpMethod.Get, ApiCommandProvider.GetRecordHttpRequest(tableName)))
 			using (var response = await httpClient.SendAsync(message))
 			{
 				response.EnsureSuccessStatusCode();
 				var stream = await response.Content.ReadAsStreamAsync();
 				return DeserializeJsonFromStream<IEnumerable<T>>(stream);
-				//return JsonConvert.DeserializeObject<List<T>>(content);
+			}
+		}
+		public async Task<IEnumerable<T>> GetSortedRecordsAsync<T>(string tableName, string orderBy, string criterium)
+		{
+			List<ISqlTableModel> modelsList = new List<ISqlTableModel>();
+			using (var message = new HttpRequestMessage(HttpMethod.Get, ApiCommandProvider.SortedRecordsHttpRequest(tableName, orderBy, criterium)))
+			using (var response = await httpClient.SendAsync(message))
+			{
+				response.EnsureSuccessStatusCode();
+				var stream = await response.Content.ReadAsStreamAsync();
+				return DeserializeJsonFromStream<IEnumerable<T>>(stream);
+			}
+		}
+		public async Task<IEnumerable<T>> SearchRecordsAsync<T>(string tableName, string orderBy, string criterium, string searchIn, string searchValue)
+		{
+			List<ISqlTableModel> modelsList = new List<ISqlTableModel>();
+			using (var message = new HttpRequestMessage(HttpMethod.Get,
+				ApiCommandProvider.SearchRecordHttpRequest(tableName, orderBy, criterium, searchIn, searchValue)))
+			using (var response = await httpClient.SendAsync(message))
+			{
+				response.EnsureSuccessStatusCode();
+				var stream = await response.Content.ReadAsStreamAsync();
+				return DeserializeJsonFromStream<IEnumerable<T>>(stream);
 			}
 		}
 		public async Task<IEnumerable<string>> GetColumnNamesAsync(string tableName)
@@ -56,6 +77,7 @@ namespace HospitalServerManager.Model.Controllers
 			{
 				response.EnsureSuccessStatusCode();
 				var columns = await response.Content.ReadAsStringAsync();
+				columns = columns.Remove(0, 1); 
 				var columnNames = columns.Split(".");
 				var x = columnNames.ToList();
 				x.RemoveAt(x.Count - 1);
@@ -82,7 +104,27 @@ namespace HospitalServerManager.Model.Controllers
 		}
 		public async Task<bool> CreateNewRecordAsync(string tableName, IEnumerable<string> valuesList)
 		{
-			using (var message = new HttpRequestMessage(HttpMethod.Get, ApiCommandProvider.CreateNewRecordAsync(tableName, valuesList.ToList())))
+			using (var message = new HttpRequestMessage(HttpMethod.Get, ApiCommandProvider.CreateNewRecord(tableName, valuesList.ToList())))
+			using (var response = await httpClient.SendAsync(message))
+			{
+				response.EnsureSuccessStatusCode();
+				return true;
+			}
+		}
+		public async Task<bool> UpdateRecordAsync(string tableName, string primaryKey, string primaryKeyName, string fieldToEdit, string valueToUpdate)
+		{
+			using (var message = new HttpRequestMessage(HttpMethod.Get, 
+				ApiCommandProvider.UpdateRecordHttpRequest(tableName, primaryKey, primaryKeyName, fieldToEdit, valueToUpdate)))
+			using (var response = await httpClient.SendAsync(message))
+			{
+				response.EnsureSuccessStatusCode();
+				return true;
+			}
+		}
+		public async Task<bool> DeleteRecordAsync(string tableName, string primaryKey, string primaryKeyName)
+		{
+			using (var message = new HttpRequestMessage(HttpMethod.Get,
+				ApiCommandProvider.DeleteRecordHttpRequest(tableName, primaryKey, primaryKeyName)))
 			using (var response = await httpClient.SendAsync(message))
 			{
 				response.EnsureSuccessStatusCode();
@@ -102,12 +144,6 @@ namespace HospitalServerManager.Model.Controllers
 				var searchResult = js.Deserialize<T>(textReader);
 				return searchResult;
 			}
-		}
-
-
-		private string GetRecordHttpRequest(string tableName)
-		{
-			return @"/getfromdb/" + tableName;
 		}
 	}
 }
