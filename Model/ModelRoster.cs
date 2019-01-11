@@ -20,7 +20,7 @@ namespace HospitalServerManager.Model
 		public IDictionary<int, string> ColumnTypes { get; private set; }
 		public Dictionary<string, Type> EnumTypes { get; protected set; }
 		public IEnumerable<ISqlTableModel> ModelsEnumerable { get => _modelsList; }
-        //private Controllers.DatabaseReader DatabaseReader = new Controllers.DatabaseReader();
+        
         public ModelRoster()
         {
 			ActualTableName = string.Empty;
@@ -37,8 +37,30 @@ namespace HospitalServerManager.Model
 			/*ColumnNames = await GetColumnNames();
 			ColumnTypes = await GetColumnTypes();*/
 			IEnumerable<ISqlTableModel> response = new List<ISqlTableModel>();
-			if(tableName == "Pacjenci") response = await webService.GetRecordAsync<Patient>(tableName);
-			else if(tableName == "Lekarze") response = await webService.GetRecordAsync<Doctor>(tableName);
+			switch (tableName)
+			{
+				case "Przyjecia":
+					response = await webService.GetRecordAsync<Admission>(tableName);
+					break;
+				case "Pacjenci":
+					response = await webService.GetRecordAsync<Patient>(tableName);
+					break;
+				case "Lekarze":
+					response = await webService.GetRecordAsync<Doctor>(tableName);
+					break;
+				case "Diagnozy":
+					response = await webService.GetRecordAsync<Diagnosis>(tableName);
+					break;
+				case "Operacje":
+					response = await webService.GetRecordAsync<Surgery>(tableName);
+					break;
+				case "Sale":
+					response = await webService.GetRecordAsync<Room>(tableName);
+					break;
+				default:
+					response = null;
+					break;
+			}
 			_modelsList.AddRange(response);
 		}
 		public async Task<IEnumerable<string>> GetColumnNames(string tableName)
@@ -58,15 +80,17 @@ namespace HospitalServerManager.Model
 			ColumnTypes = await webService.GetColumnTypesAsync(ActualTableName);
 			return ColumnTypes;
 		}
-		public async void CreateRecord(string tableName, IEnumerable<string> valueList)
+		public async Task CreateRecordAsync(string tableName, IEnumerable<string> valueList)
 		{
-			await webService.CreateNewRecordAsync(tableName, valueList);
+			if (!await webService.CreateNewRecordAsync(tableName, valueList))
+				await new MessageDialog("Wystąpił błąd, sprawdź poprawność danych").ShowAsync();
 		}
-		public async void UpdateRecord(string tableName, string primaryKey, string primaryKeyName, string fieldToUpdate, string valueToUpdate)
+		public async Task UpdateRecordAsync(string tableName, string primaryKey, string primaryKeyName, string fieldToUpdate, string valueToUpdate)
 		{
-			await webService.UpdateRecordAsync(tableName, primaryKey, primaryKeyName, fieldToUpdate, valueToUpdate);
+			if(!await webService.UpdateRecordAsync(tableName, primaryKey, primaryKeyName, fieldToUpdate, valueToUpdate))
+				await new MessageDialog("Wystąpił błąd, sprawdź poprawność danych").ShowAsync();
 		}
-		public async void DeleteRecord(string tableName, SqlTable modelToDelete)
+		public async Task DeleteRecordAsync(string tableName, SqlTable modelToDelete)
 		{
 			if(!(modelToDelete is Admission))
 			{
@@ -81,15 +105,17 @@ namespace HospitalServerManager.Model
 					response = await mDialog.ShowAsync();
 					if (response == mDialog.Commands.First())
 					{
-						DeleteRecord("Przyjecia", modelToDelete.PrimaryKey, GetForeignKeyNameFromAdmissionsTable(tableName));
-						DeleteRecord(tableName, modelToDelete.PrimaryKey, modelToDelete.PrimaryKeyName);
+						await DeleteRecord("Przyjecia", modelToDelete.PrimaryKey, GetForeignKeyNameFromAdmissionsTable(tableName));
+						await DeleteRecord(tableName, modelToDelete.PrimaryKey, modelToDelete.PrimaryKeyName);
 					}
 				}
+				else
+					await DeleteRecord(tableName, modelToDelete.PrimaryKey, modelToDelete.PrimaryKeyName);
 			}
 			else
-				DeleteRecord(tableName, modelToDelete.PrimaryKey, modelToDelete.PrimaryKeyName);
+				await DeleteRecord(tableName, modelToDelete.PrimaryKey, modelToDelete.PrimaryKeyName);
 		}
-		private async void DeleteRecord(string tableName, string primaryKey, string primaryKeyName)
+		private async Task DeleteRecord(string tableName, string primaryKey, string primaryKeyName)
 		{
 			await webService.DeleteRecordAsync(tableName, primaryKey, primaryKeyName);
 		}
@@ -199,6 +225,7 @@ namespace HospitalServerManager.Model
 			}
 			_modelsList.AddRange(response);
 		}
+
 		public async Task Search(string tableName, string orderBy, string criterium, string searchIn, string searchValue)
 		{
 			_modelsList.Clear();

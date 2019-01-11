@@ -100,6 +100,7 @@
     <Compile Include="InterfacesAndEnums\Interfaces.cs" />
     <Compile Include="Model\Basic\Admission.cs" />
     <Compile Include="Model\Controllers\ApiCommandProvider.cs" />
+    <Compile Include="Model\Controllers\SmtpMailSender.cs" />
     <Compile Include="Model\Controllers\WebService.cs" />
     <Compile Include="Model\RangeObservableCollection.cs" />
     <Compile Include="ViewModel\AdmissionViewModel.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Model\Basic\SqlTable.cs" />
     <Compile Include="Model\Basic\Surgery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Controllers\MailService.cs" />
     <Compile Include="ViewModel\Controllers\ViewNavigator.cs" />
     <Compile Include="ViewModel\DataProvider\NavigationPageTypeProvider.cs" />
     <Compile Include="ViewModel\DataProvider\TypeProvider.cs" />
@@ -137,6 +139,9 @@
     <Compile Include="View\MainFrameView.xaml.cs">
       <DependentUpon>MainFrameView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NewAdmissionPage.xaml.cs">
+      <DependentUpon>NewAdmissionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NewRecordDialog.xaml.cs">
       <DependentUpon>NewRecordDialog.xaml</DependentUpon>
     </Compile>
@@ -146,8 +151,8 @@
     <Compile Include="View\RoomsPage.xaml.cs">
       <DependentUpon>RoomsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UserControls\ColumnListView.xaml.cs">
-      <DependentUpon>ColumnListView.xaml</DependentUpon>
+    <Compile Include="View\SurgeriesPage.xaml.cs">
+      <DependentUpon>SurgeriesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +196,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NewAdmissionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\NewRecordDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -203,7 +212,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\UserControls\ColumnListView.xaml">
+    <Page Include="View\SurgeriesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

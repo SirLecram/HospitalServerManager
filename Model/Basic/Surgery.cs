@@ -1,4 +1,5 @@
 ﻿using HospitalServerManager.InterfacesAndEnums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,16 @@ namespace HospitalServerManager.Model.Basic
 			KindOfSurgery = listOfValues[3].GetEnumFromDescription<SurgeryKind>();
 			Cost = decimal.Parse(listOfValues[4]);
 			Refoundation = int.Parse(listOfValues[5]) > 100 ? 100 : int.Parse(listOfValues[5]);
+		}
+		[JsonConstructor]
+		protected Surgery(string operationID, string name, string averageTime, string operationType, decimal cost, int refoundation)
+			:base(operationID, "Id_operacji", new List<string>())
+		{
+			SurgeryName = name;
+			AverageTime = TimeSpan.Parse(averageTime);
+			KindOfSurgery = operationType.GetEnumFromDescription<SurgeryKind>();
+			Cost = cost;
+			Refoundation = refoundation;
 		}
 	}
 }

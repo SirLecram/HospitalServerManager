@@ -29,5 +29,9 @@ namespace HospitalServerManager.ViewModel
 		{
 			return model.PrimaryKeyName;
 		}
+		public override string ToString()
+		{
+			return "Sala nr" + PrimaryKey;
+		}
 	}
 }

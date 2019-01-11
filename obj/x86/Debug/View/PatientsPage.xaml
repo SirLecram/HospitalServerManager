@@ -32,9 +32,9 @@
         <TextBlock x:ConnectionId='3' Text="Pacjenci" HorizontalAlignment="Left" Margin="15, 5, 0, 0" FontSize="20"
                    VerticalAlignment="Top" Name="pageTitle" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:ConnectionId='20' Content="Nowy rekord" Margin="30, 0, 30, 0"  Grid.Row="1"                               Width="150"/>
-            <Button x:ConnectionId='21' Content="Usuń zaznaczone" Margin="30, 0, 30, 0"  Grid.Row="1" Grid.Column="1"                            Width="150"/>
-            <Button x:ConnectionId='22' Content="Edytuj rekord" Margin="30, 0, 30, 0"  Grid.Row="1"                          Width="150"/>
+            <Button x:ConnectionId='21' Content="Nowy rekord" Margin="30, 0, 30, 0"  Grid.Row="1"                               Width="150"/>
+            <Button x:ConnectionId='22' Content="Usuń zaznaczone" Margin="30, 0, 30, 0"  Grid.Row="1" Grid.Column="1"                            Width="150"/>
+            <Button x:ConnectionId='23' Content="Edytuj rekord" Margin="30, 0, 30, 0"  Grid.Row="1"                          Width="150"/>
         </StackPanel>
 
         <!-- </StackPanel> -->
@@ -56,13 +56,13 @@
                      VerticalAlignment="Center" Margin="10"/>
             <TextBlock Text="Szukaj w:" Grid.Row="2" HorizontalAlignment="Stretch" 
                      VerticalAlignment="Center" Margin="10"/>
-            <TextBox x:ConnectionId='16' Name="searchBox" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" 
+            <TextBox x:ConnectionId='17' Name="searchBox" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" 
                      VerticalAlignment="Center" Margin="10"/>
-            <ComboBox x:ConnectionId='17' Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"
+            <ComboBox x:ConnectionId='18' Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"
                       Name="lookInComboBox" />
             <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="10">
-                <Button x:ConnectionId='18' Content="Przeszukaj bazę" HorizontalAlignment="Stretch" Margin="10"                           />
-                <Button x:ConnectionId='19' Content="Resetuj" HorizontalAlignment="Stretch" Margin="10"                          />
+                <Button x:ConnectionId='19' Content="Przeszukaj bazę" HorizontalAlignment="Stretch" Margin="10"                           />
+                <Button x:ConnectionId='20' Content="Resetuj" HorizontalAlignment="Stretch" Margin="10"                          />
             </StackPanel>
 
         </Grid>
@@ -86,11 +86,10 @@
             <ComboBox x:ConnectionId='13' Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                       Margin="10" Name="sortComboBox"                                                  />
             <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <RadioButton x:ConnectionId='14' Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1"                        />
-                <RadioButton x:ConnectionId='15' Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2"                        />
+                <RadioButton x:ConnectionId='15' Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1"                        />
+                <RadioButton x:ConnectionId='16' Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2"                        />
             </StackPanel>
-            <Button Content="Zaawansowane filtry" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"
-                    Margin="15, 0, 15, 0"/>
+            <Button x:ConnectionId='14' Name="sendEmailToSelected" Content="WYSLIJ MAILA" Grid.Row="2" Grid.Column="2"                                   />
 
         </Grid>
         <Grid Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"

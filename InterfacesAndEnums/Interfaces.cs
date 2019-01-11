@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
@@ -49,5 +50,10 @@ namespace HospitalServerManager.InterfacesAndEnums
 	{
 		IEnumerable<string> GetColumnNames(string tableName);
 		IDictionary<int, string> GetColumnTypesNames(string tableName);
+	}
+	public interface IHasEmailAdress
+	{
+		bool IsEmailAdressInitialized();
+		MailAddress GetEmailAdress();
 	}
 }

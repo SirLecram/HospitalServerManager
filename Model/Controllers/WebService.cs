@@ -108,6 +108,9 @@ namespace HospitalServerManager.Model.Controllers
 			using (var response = await httpClient.SendAsync(message))
 			{
 				response.EnsureSuccessStatusCode();
+				var str = await response.Content.ReadAsStringAsync();
+				if (str == "ERROR")
+					return false;
 				return true;
 			}
 		}
@@ -118,6 +121,9 @@ namespace HospitalServerManager.Model.Controllers
 			using (var response = await httpClient.SendAsync(message))
 			{
 				response.EnsureSuccessStatusCode();
+				var str = await response.Content.ReadAsStringAsync();
+				if(str == "ERROR")
+					return false;
 				return true;
 			}
 		}
@@ -128,6 +134,9 @@ namespace HospitalServerManager.Model.Controllers
 			using (var response = await httpClient.SendAsync(message))
 			{
 				response.EnsureSuccessStatusCode();
+				var str = await response.Content.ReadAsStringAsync();
+				if (str == "ERROR")
+					return false;
 				return true;
 			}
 		}

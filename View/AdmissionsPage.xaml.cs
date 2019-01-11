@@ -2,17 +2,9 @@
 using HospitalServerManager.ViewModel;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
@@ -37,7 +29,7 @@ namespace HospitalServerManager.View
 			if (dialogResult == ContentDialogResult.Primary && createDialog.ValuesOfNewObject.Any())
 			{
 				List<string> valuesList = createDialog.ValuesOfNewObject;
-				RosterViewModel.CreateRecord("Przyjecia", valuesList);
+				await RosterViewModel.CreateRecordAsync("Przyjecia", valuesList);
 			}
 		}
 		private async void EditRecord()
@@ -51,7 +43,7 @@ namespace HospitalServerManager.View
 			{
 				string result = dialog.Result;
 				string fieldToEdit = dialog.FieldToUpdate;
-				RosterViewModel.UpdateRecord("Przyjecia", admission, fieldToEdit, result);
+				await RosterViewModel.UpdateRecordAsync("Przyjecia", admission, fieldToEdit, result);
 			}
 		}
 		public void Sort(string orderBy, string criterium)
@@ -101,15 +93,15 @@ namespace HospitalServerManager.View
 
 		private async void ResetButton_Click(object sender, RoutedEventArgs e)
 		{
-			await RosterViewModel.Read(typeof(AdmissionViewModel), "Przyjecia");
+			await RosterViewModel.ReadAsync(typeof(AdmissionViewModel), "Przyjecia");
 		}
 
-		private void DeleteButton_Click(object sender, RoutedEventArgs e)
+		private async void DeleteButton_Click(object sender, RoutedEventArgs e)
 		{
 			if (databaseView.SelectedItem != null)
 			{
 				var admission = databaseView.SelectedItem as IPrimaryKeyGetable;
-				RosterViewModel.DeleteRecord("Przyjecia", admission);
+				await RosterViewModel.DeleteRecordAsync("Przyjecia", admission);
 			}
 		}
 
@@ -119,29 +111,20 @@ namespace HospitalServerManager.View
 				EditRecord();
 		}
 
-		private void NewRecordButton_Click(object sender, RoutedEventArgs e)
-		{
-			NewRecord();
-		}
 		#endregion
 
 		protected async override void OnNavigatedTo(NavigationEventArgs e)
 		{
-			//await RosterViewModel.Read(typeof(AdmissionViewModel), "Przyjecia");
-			await RosterViewModel.InitializeViewModels("Przyjecia");
+			await RosterViewModel.InitializeViewModelsAsync("Przyjecia");
 			databaseView.ItemsSource = RosterViewModel.ModelsCollection;
 			lookInComboBox.ItemsSource = sortComboBox.ItemsSource = RosterViewModel.ColumnNames;
 			lookInComboBox.SelectedIndex = sortComboBox.SelectedIndex = 0;
-		}
-
-		private async void Page_Loaded(object sender, RoutedEventArgs e)
-		{
-			;
+			btnNewRecord.Click += (sender, x) => (e.Parameter as Action).Invoke();
 		}
 
 		public void UnloadPage()
 		{
-			//throw new NotImplementedException();
+			;
 		}
 	}
 }

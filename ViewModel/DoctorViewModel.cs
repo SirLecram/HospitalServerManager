@@ -16,7 +16,7 @@ namespace HospitalServerManager.ViewModel
 		public string AdacemicDegree { get => model._AcademicDegree.GetEnumDescription(); }
 		public string MedicalSpecialization { get => model._MedicalSpecialization.GetEnumDescription(); }
 		public string Surname { get => model.Surname; }
-		public DateTime EmploymentDate { get => model.DateOfEmployment; }
+		public string EmploymentDate { get => model.DateOfEmployment.ToShortDateString(); }
 		public string JobPosition { get => model._JobPosition.GetEnumDescription(); }
 
 		public DoctorViewModel(Doctor model)
@@ -32,6 +32,10 @@ namespace HospitalServerManager.ViewModel
 		public string GetPrimaryKeyName()
 		{
 			return model.PrimaryKeyName;
+		}
+		public override string ToString()
+		{
+			return PrimaryKey + " " + Name + " " + Surname;
 		}
 	}
 }

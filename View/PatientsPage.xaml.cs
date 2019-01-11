@@ -34,7 +34,7 @@ namespace HospitalServerManager.View
 			if (dialogResult == ContentDialogResult.Primary && createDialog.ValuesOfNewObject.Any())
 			{
 				List<string> valuesList = createDialog.ValuesOfNewObject;
-				RosterViewModel.CreateRecord("Pacjenci", valuesList);
+				await RosterViewModel.CreateRecordAsync("Pacjenci", valuesList);
 			}
 		}
 		private async void EditRecord()
@@ -48,7 +48,7 @@ namespace HospitalServerManager.View
 			{
 				string result = dialog.Result;
 				string fieldToEdit = dialog.FieldToUpdate;
-				RosterViewModel.UpdateRecord("Pacjenci", patient, fieldToEdit, result);
+				await RosterViewModel.UpdateRecordAsync("Pacjenci", patient, fieldToEdit, result);
 			}
 		}
 		public void Sort(string orderBy, string criterium)
@@ -97,15 +97,15 @@ namespace HospitalServerManager.View
 
         private async void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-			await RosterViewModel.Read(typeof(PatientViewModel), "Pacjenci");
+			await RosterViewModel.ReadAsync(typeof(PatientViewModel), "Pacjenci");
 		}
 
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
 			if (databaseView.SelectedItem != null)
 			{
 				var patient = databaseView.SelectedItem as IPrimaryKeyGetable;
-				RosterViewModel.DeleteRecord("Pacjenci", patient);
+				await RosterViewModel.DeleteRecordAsync("Pacjenci", patient);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace HospitalServerManager.View
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
 			//await RosterViewModel.Read(typeof(PatientViewModel), "Pacjenci");
-			await RosterViewModel.InitializeViewModels("Pacjenci");
+			await RosterViewModel.InitializeViewModelsAsync("Pacjenci");
 			databaseView.ItemsSource = RosterViewModel.ModelsCollection;
 			lookInComboBox.ItemsSource = sortComboBox.ItemsSource = RosterViewModel.ColumnNames;
 			lookInComboBox.SelectedIndex = sortComboBox.SelectedIndex = 0;
@@ -140,6 +140,11 @@ namespace HospitalServerManager.View
 		public void UnloadPage()
 		{
 			;
+		}
+
+		private void SendEmailToSelected_Click(object sender, RoutedEventArgs e)
+		{
+			RosterViewModel.SendEmailAsync(databaseView.SelectedItem as PatientViewModel);
 		}
 	}
 }

@@ -89,8 +89,7 @@
                 <RadioButton Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1" Click="RadionBtn_Click"/>
                 <RadioButton Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2" Click="RadionBtn_Click"/>
             </StackPanel>
-            <Button Content="Zaawansowane filtry" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"
-                    Margin="15, 0, 15, 0"/>
+            <Button Name="sendEmailToSelected" Content="WYSLIJ MAILA" Grid.Row="2" Grid.Column="2" Click="SendEmailToSelected_Click" />
 
         </Grid>
         <Grid Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"

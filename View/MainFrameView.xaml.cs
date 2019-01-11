@@ -19,7 +19,8 @@ using Windows.UI.Xaml.Navigation;
 
 namespace HospitalServerManager.View
 {
-    /// WebService powinien byc chyba wlasciwoscia w roznych kontrolerach np. GetController/PutController itp.
+    /// WebService powinien byc chyba wlasciwoscia w roznych kontrolerach np. GetController/PutController itp.; Obsługa błędów !! Np. Error z servera;
+	/// Reload rekordów po edit i update; Testy w insert i update głupich wartości; Może ten email??;
     public sealed partial class MainFrameView : Page
     {
 		private INavigator Navigator { get; set; }
@@ -32,10 +33,16 @@ namespace HospitalServerManager.View
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
 			string pageTypeName = (sender as AppBarButton).Tag.ToString();
+			if(pageTypeName == "AdmissionsPage")
+			{
+				Navigator.SetParameter(new Action(() => Navigator.ChangeFrame(typeof(NewAdmissionPage), mainFrame)));
+			}
 			Type pageType = TypeProvider.GetTypeFromString(pageTypeName);
 
 			IPageNavigateable page = Navigator.ChangeFrame(pageType, mainFrame);
-        }
+			Navigator.RemoveParameters();
+			navigationBar.IsOpen = navigationBar.IsSticky = true;
+		}
 		private void InitializeProperties()
 		{
 			IValidateIfInterfaceIsImplemented validator = new ViewModel.Validators.InterfaceImplementValidator();
@@ -45,11 +52,13 @@ namespace HospitalServerManager.View
 				new List<Type>
 				{
 					typeof(PatientsPage), typeof(DoctorsPage), typeof(AdmissionsPage), typeof(DiagnosesPage),
-					typeof(RoomsPage),
+					typeof(RoomsPage), typeof(SurgeriesPage), typeof(NewAdmissionPage),
 				});
+			Navigator.SetParameter(new Action(() => Navigator.ChangeFrame(typeof(NewAdmissionPage), mainFrame)));
 			Type pageType = TypeProvider.GetTypeFromString("AdmissionsPage");
 
 			Navigator.ChangeFrame(pageType, mainFrame);
+			Navigator.RemoveParameters();
 		}
 	}
 }

@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <viewmodel:RosterViewModel x:Name="RosterViewModel"/>
     </Page.Resources>
@@ -31,7 +31,7 @@
         <TextBlock Text="Przyjęcia" HorizontalAlignment="Left" Margin="15, 5, 0, 0" FontSize="20"
                    VerticalAlignment="Top" Name="pageTitle" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Nowy rekord" Margin="30, 0, 30, 0"  Grid.Row="1" Click="NewRecordButton_Click" Width="150"/>
+            <Button Content="Nowy rekord" Margin="30, 0, 30, 0"  Grid.Row="1" Width="150" Name="btnNewRecord"/>
             <Button Content="Usuń zaznaczone" Margin="30, 0, 30, 0"  Grid.Row="1" Grid.Column="1" Click="DeleteButton_Click" Width="150"/>
             <Button Content="Edytuj rekord" Margin="30, 0, 30, 0"  Grid.Row="1" Click="EditButton_Click" Width="150"/>
         </StackPanel>
@@ -88,8 +88,6 @@
                 <RadioButton Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1" Click="RadionBtn_Click"/>
                 <RadioButton Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2" Click="RadionBtn_Click"/>
             </StackPanel>
-            <Button Content="Zaawansowane filtry" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"
-                    Margin="15, 0, 15, 0"/>
 
         </Grid>
         <Grid Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
@@ -116,15 +114,15 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="ID przyjęcia" Margin="8,0"  Foreground="DarkRed" Grid.Column="0"/>
-                            <TextBlock Text="Data przyjęcia"  Foreground="DarkRed" Grid.Column="1"/>
-                            <TextBlock Text="Data zwolnienia"  Foreground="DarkRed" Grid.Column="2"/>
-                            <TextBlock Text="Pesel pacjenta" Foreground="DarkRed" Grid.Column="3"/>
-                            <TextBlock Text="Symbol diagnozy" Foreground="DarkRed" Grid.Column="4"/>
-                            <TextBlock Text="ID lekarza"  Foreground="DarkRed" Grid.Column="5"/>
-                            <TextBlock Text="ID operacji"  Foreground="DarkRed" Grid.Column="6"/>
-                            <TextBlock Text="Nr pokoju"  Foreground="DarkRed" Grid.Column="7"/>
-                            <TextBlock Text="Planowane?"  Foreground="DarkRed" Grid.Column="8"/>
+                            <TextBlock Text="ID przyjęcia" Margin="8,0"  Foreground="DarkRed" Grid.Column="0" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Data przyjęcia"  Foreground="DarkRed" Grid.Column="1" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Data zwolnienia"  Foreground="DarkRed" Grid.Column="2" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Pesel pacjenta" Foreground="DarkRed" Grid.Column="3" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Symbol diagnozy" Foreground="DarkRed" Grid.Column="4" HorizontalAlignment="Center"/>
+                            <TextBlock Text="ID lekarza"  Foreground="DarkRed" Grid.Column="5" HorizontalAlignment="Center"/>
+                            <TextBlock Text="ID operacji"  Foreground="DarkRed" Grid.Column="6" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Nr pokoju"  Foreground="DarkRed" Grid.Column="7" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Planowane?"  Foreground="DarkRed" Grid.Column="8" HorizontalAlignment="Center"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.HeaderTemplate>
@@ -154,25 +152,25 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Name="ItemId"
+                            <TextBlock Name="ItemId" HorizontalAlignment="Center"
                                     Text="{x:Bind PrimaryKey}"
                                     Grid.Column="0" />
-                            <TextBlock Name="ItemName"
+                            <TextBlock Name="ItemName" HorizontalAlignment="Center"
                                     Text="{x:Bind AdmissionDate}"
                                      Grid.Column="1"/>
-                            <TextBlock Text="{x:Bind LeavingDate}"
+                            <TextBlock Text="{x:Bind LeavingDate}" HorizontalAlignment="Center"
                                     Grid.Column="2"/>
-                            <TextBlock Text="{x:Bind PatientPESEL}"
+                            <TextBlock Text="{x:Bind PatientPESEL}" HorizontalAlignment="Center"
                                    Grid.Column="3"/>
-                            <TextBlock Text="{x:Bind DiagnosisSymbol}"
+                            <TextBlock Text="{x:Bind DiagnosisSymbol}" HorizontalAlignment="Center"
                                     Grid.Column="4"/>
-                            <TextBlock Text="{x:Bind MainDoctor}"
+                            <TextBlock Text="{x:Bind MainDoctor}" HorizontalAlignment="Center"
                                     Grid.Column="5"/>
-                            <TextBlock Text="{x:Bind OperationID}"
+                            <TextBlock Text="{x:Bind OperationID}" HorizontalAlignment="Center"
                                     Grid.Column="6"/>
-                            <TextBlock Text="{x:Bind RoomNumber}"
+                            <TextBlock Text="{x:Bind RoomNumber}" HorizontalAlignment="Center"
                                     Grid.Column="7"/>
-                            <TextBlock Text="{x:Bind IsPlanned}"
+                            <TextBlock Text="{x:Bind IsPlanned}" HorizontalAlignment="Center"
                                     Grid.Column="8"/>
                         </Grid>
                     </DataTemplate>

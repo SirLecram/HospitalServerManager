@@ -88,8 +88,6 @@
                 <RadioButton x:ConnectionId='15' Content="Rosnąco" Margin="15, 0, 15, 0" IsChecked="True" Tag="0" Name="radioBtn1"                        />
                 <RadioButton x:ConnectionId='16' Content="Malejąco" Margin="15, 0, 15, 0" Tag="1" Name="radionBtn2"                        />
             </StackPanel>
-            <Button Content="Zaawansowane filtry" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"
-                    Margin="15, 0, 15, 0"/>
 
         </Grid>
         <Grid Grid.Row="3" Grid.ColumnSpan="4" Margin="20, 5, 20, 5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
@@ -106,21 +104,21 @@
                         <Grid  >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.15*"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                                <ColumnDefinition Width="0.7*"/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="Id" Margin="8,0"  Foreground="DarkRed" Grid.Column="0"/>
-                            <TextBlock Text="Imię"  Foreground="DarkRed" Grid.Column="1"/>
-                            <TextBlock Text="Nazwisko"  Foreground="DarkRed" Grid.Column="2"/>
-                            <TextBlock Text="Stopień naukowy" Foreground="DarkRed" Grid.Column="3"/>
-                            <TextBlock Text="Specjalizacja" Foreground="DarkRed" Grid.Column="4"/>
-                            <TextBlock Text="Data zatrudnienia"  Foreground="DarkRed" Grid.Column="5"/>
-                            <TextBlock Text="Stanowisko"  Foreground="DarkRed" Grid.Column="6"/>
+                            <TextBlock Text="Id" Margin="8,0"  Foreground="DarkRed" Grid.Column="0" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Imię"  Foreground="DarkRed" Grid.Column="1" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Nazwisko"  Foreground="DarkRed" Grid.Column="2" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Stopień naukowy" Foreground="DarkRed" Grid.Column="3" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Specjalizacja" Foreground="DarkRed" Grid.Column="4" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Data zatrudnienia"  Foreground="DarkRed" Grid.Column="5" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Stanowisko"  Foreground="DarkRed" Grid.Column="6" HorizontalAlignment="Center"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.HeaderTemplate>
@@ -141,28 +139,28 @@
                         <Grid x:ConnectionId='5' Name="valueStoreGrid">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.15*"/>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                                <ColumnDefinition Width="0.7*"/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock x:ConnectionId='6' Name="ItemId"
+                            <TextBlock x:ConnectionId='6' Name="ItemId" HorizontalAlignment="Center"
                                                               
                                     Grid.Column="0" FontSize="12"/>
-                            <TextBlock x:ConnectionId='7' Name="ItemName"
+                            <TextBlock x:ConnectionId='7' Name="ItemName" HorizontalAlignment="Center"
                                                         
                                      Grid.Column="1" FontSize="12"/>
-                            <TextBlock x:ConnectionId='8'                        
+                            <TextBlock x:ConnectionId='8'                         HorizontalAlignment="Center"
                                     Grid.Column="2" FontSize="12"/>
-                            <TextBlock x:ConnectionId='9'                               
+                            <TextBlock x:ConnectionId='9'                                HorizontalAlignment="Center"
                                    Grid.Column="3" FontSize="12"/>
-                            <TextBlock x:ConnectionId='10'                                      
+                            <TextBlock x:ConnectionId='10'                                       HorizontalAlignment="Center"
                                     Grid.Column="4" FontSize="12"/>
-                            <TextBlock x:ConnectionId='11'                               
+                            <TextBlock x:ConnectionId='11'                                HorizontalAlignment="Center"
                                     Grid.Column="5" FontSize="12"/>
-                            <TextBlock x:ConnectionId='12'                            
+                            <TextBlock x:ConnectionId='12'                             HorizontalAlignment="Center"
                                     Grid.Column="6" FontSize="12"/>
                         </Grid>
                     </DataTemplate>

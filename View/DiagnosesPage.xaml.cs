@@ -37,7 +37,7 @@ namespace HospitalServerManager.View
 			if (dialogResult == ContentDialogResult.Primary && createDialog.ValuesOfNewObject.Any())
 			{
 				List<string> valuesList = createDialog.ValuesOfNewObject;
-				RosterViewModel.CreateRecord("Diagnozy", valuesList);
+				await RosterViewModel.CreateRecordAsync("Diagnozy", valuesList);
 			}
 		}
 		private async void EditRecord()
@@ -51,7 +51,7 @@ namespace HospitalServerManager.View
 			{
 				string result = dialog.Result;
 				string fieldToEdit = dialog.FieldToUpdate;
-				RosterViewModel.UpdateRecord("Diagnozy", diagnosis, fieldToEdit, result);
+				await RosterViewModel.UpdateRecordAsync("Diagnozy", diagnosis, fieldToEdit, result);
 			}
 		}
 		public void Sort(string orderBy, string criterium)
@@ -101,15 +101,15 @@ namespace HospitalServerManager.View
 
 		private async void ResetButton_Click(object sender, RoutedEventArgs e)
 		{
-			await RosterViewModel.Read(typeof(DiagnosisViewModel), "Diagnozy");
+			await RosterViewModel.ReadAsync(typeof(DiagnosisViewModel), "Diagnozy");
 		}
 
-		private void DeleteButton_Click(object sender, RoutedEventArgs e)
+		private async void DeleteButton_Click(object sender, RoutedEventArgs e)
 		{
 			if (databaseView.SelectedItem != null)
 			{
 				var diagnosis = databaseView.SelectedItem as IPrimaryKeyGetable;
-				RosterViewModel.DeleteRecord("Diagnozy", diagnosis);
+				await RosterViewModel.DeleteRecordAsync("Diagnozy", diagnosis);
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace HospitalServerManager.View
 		protected async override void OnNavigatedTo(NavigationEventArgs e)
 		{
 			//await RosterViewModel.Read(typeof(DiagnosisViewModel), "Diagnozy");
-			await RosterViewModel.InitializeViewModels("Diagnozy");
+			await RosterViewModel.InitializeViewModelsAsync("Diagnozy");
 			databaseView.ItemsSource = RosterViewModel.ModelsCollection;
 			lookInComboBox.ItemsSource = sortComboBox.ItemsSource = RosterViewModel.ColumnNames;
 			lookInComboBox.SelectedIndex = sortComboBox.SelectedIndex = 0;

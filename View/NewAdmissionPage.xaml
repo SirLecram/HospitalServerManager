@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="HospitalServerManager.View.NewAdmissionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HospitalServerManager.View"
+    xmlns:viewmodel="using:HospitalServerManager.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <viewmodel:RosterViewModel x:Name="RosterViewModel"/>
+    </Page.Resources>
+    <Grid Margin="60" Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        <TextBlock Name="lastAdmission" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="18"/>
+        <TextBox Name="tbID" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <DatePicker Name="admissionDate" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <DatePicker Name="leavingDate" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <ComboBox Name="patientsId" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <ComboBox Name="diagnosisSymbol" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <ComboBox Name="mainDoctorId" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <ComboBox Name="operationId" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <ComboBox Name="roomNumber" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <RadioButton Name="trueCheckBox" Content="TRUE" IsChecked="True"/>
+            <RadioButton Name="falseCheckBox" Content="FALSE"/>
+        </StackPanel>
+        <Button Content="Sprawdź poprawność danych i potwierdź" Grid.Row="10" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                FontSize="17" Click="Button_Click"/>
+    </Grid>
+    
+</Page>

@@ -13,8 +13,9 @@ View\DiagnosesPage.xbf
 View\DoctorsPage.xbf
 View\EditRecordDialog.xbf
 View\MainFrameView.xbf
+View\NewAdmissionPage.xbf
 View\NewRecordDialog.xbf
 View\PatientsPage.xbf
 View\RoomsPage.xbf
-View\UserControls\ColumnListView.xbf
+View\SurgeriesPage.xbf
 Properties\Default.rd.xml

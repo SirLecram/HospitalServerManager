@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalServerManager.InterfacesAndEnums;
@@ -15,6 +16,7 @@ namespace HospitalServerManager.Model.Basic
         public DateTime BirthDate { get; protected set; }
         public PatientState PatientState { get; protected set; }
         public Sex PatientSex { get; protected set; }
+		public MailAddress EmailAdress { get; protected set; }
 
         protected Patient() : base()
         {

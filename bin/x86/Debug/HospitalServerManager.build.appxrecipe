@@ -574,6 +574,9 @@
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\MainFrameView.xbf">
       <PackagePath>View\MainFrameView.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\NewAdmissionPage.xbf">
+      <PackagePath>View\NewAdmissionPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\NewRecordDialog.xbf">
       <PackagePath>View\NewRecordDialog.xbf</PackagePath>
     </AppxPackagedFile>
@@ -583,8 +586,8 @@
     <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\RoomsPage.xbf">
       <PackagePath>View\RoomsPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\UserControls\ColumnListView.xbf">
-      <PackagePath>View\UserControls\ColumnListView.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Marcel\Documents\GitHub\HospitalServerManagerApp\HospitalServerManager\bin\x86\Debug\View\SurgeriesPage.xbf">
+      <PackagePath>View\SurgeriesPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
