@@ -15,7 +15,7 @@
         <userControls:ColumnListView DataContext="{StaticResource RosterViewModel}" Name="lv"/>
     </Grid> -->
 
-    <Grid Background="DimGray">
+    <Grid Background="BlanchedAlmond">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*"/>
             <RowDefinition Height="0.5*"/>

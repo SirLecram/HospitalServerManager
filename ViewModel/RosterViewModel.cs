@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalServerManager.InterfacesAndEnums;
 using HospitalServerManager.Model;
 using HospitalServerManager.Model.Basic;
 using HospitalServerManager.Model.Controllers;
+using Windows.UI.Popups;
 
 namespace HospitalServerManager.ViewModel
 {
@@ -99,7 +101,14 @@ namespace HospitalServerManager.ViewModel
 		}
 		public async void SendEmailAsync(IHasEmailAdress sendToModel)
 		{
-			await mailSender.SendEmailAsync(sendToModel.GetEmailAdress().Address, "WIADOMOSC TESTOWA", "TEMAT TEST");
+			try
+			{
+				await mailSender.SendEmailAsync(sendToModel.GetEmailAdress().Address, "WIADOMOSC TESTOWA", "TEMAT TEST");
+			}
+			catch (SmtpException e)
+			{
+				await new MessageDialog("Błąd połączenia z serwerem poczty | " + e.Message).ShowAsync();
+			}
 		}
 
 	}

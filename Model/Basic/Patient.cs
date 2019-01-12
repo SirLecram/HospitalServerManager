@@ -23,7 +23,7 @@ namespace HospitalServerManager.Model.Basic
         }
 		[JsonConstructor]
         protected Patient(string pesel, string name, string surname, DateTime birthDate, string patientState,
-            string patientSex) : base(pesel, "PESEL", new List<string>())
+            string patientSex, string patientEmail) : base(pesel, "PESEL", new List<string>())
         {
             if (pesel.Length < 11 || pesel.Length > 11)
                 throw new FormatException("PESEL musi mieć 11 cyfr");
@@ -33,6 +33,7 @@ namespace HospitalServerManager.Model.Basic
             BirthDate = birthDate;
             PatientState = patientState.GetEnumFromDescription<PatientState>();
             PatientSex = patientSex.GetEnumFromDescription<Sex>();
+			EmailAdress = new MailAddress(patientEmail);
         }
 		public Patient(string pesel, string name, string surname, DateTime birthDate, PatientState patientState,
 		   Sex patientSex) : base(pesel, "PESEL", new List<string>())

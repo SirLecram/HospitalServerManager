@@ -11,6 +11,8 @@ namespace HospitalServerManager.ViewModel.Controllers
 {
     class DatabaseReader
     {
+		// KLASA ZNALAZŁA SIĘ TUTAJ TYLKO DLA POMOCY PRZY TESTOWANIU POCZĄTKOWEJ WERSJI APLIKACJI, NIE PODŁĄCZONEJ JESZCZE DO SIECI.
+		// Postanowiłem, że ją zostawię na przyszłość
         private List<ISqlTableModel> _ModelsList { get; set; }
        
         public IReadOnlyList<ISqlTableModel> LastReadedModels { get => _ModelsList; }

@@ -48,7 +48,7 @@ namespace HospitalServerManager.ViewModel
 
 		public MailAddress GetEmailAdress()
 		{
-			return new MailAddress("paker_7@o2.pl");
+			return model.EmailAdress;
 		}
 	}
 }
